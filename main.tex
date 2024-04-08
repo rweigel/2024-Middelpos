@@ -8,7 +8,7 @@
 
 \draftfalse
 
-\journalname{Space Weather}
+%\journalname{Space Weather}
 
 \begin{document}
 
@@ -31,6 +31,7 @@
 \end{keypoints}
 
 \begin{abstract}
+From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument (LEMI-417, LEMI LLC, Ukraine)  made continuous 1-second recordings at a Middelpos, South Africa site.
 \end{abstract}
 
 \section{Introduction}
@@ -38,10 +39,26 @@
 \section{Data}
 \label{section:Data}
 
+The LEMI-417 instrument is designed for long--term recording of MT data and is comprised of a 3--axis fluxgate magnetometer from a  magnetometer and 2-axis E--field antenna. The instrument was installed in an open field near the small town Middelpos, South Africa (Geographic latitude -31.90605713$^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The unit is powered from batteries that are charged from a solar panel. We used 1--second cadence measurements from 2012-07-12 through 2012-11-07 (119 days).
+
+During installation, the X-axis of the magnetometer is aligned with geomagnetic North. The magnetic declination at Middelpos in 2020 was 23o 55.86’ W (IGRF-12 model, IGRF (2012)). The North-South leg of the E-field probes is aligned with the X-axis of the magnetometer. Figure 1 shows a photo of the instrument and Figure 2 shows an annotated Google Earth image of the instrument location and the E-field sensors.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{figures/site.png}
+  \caption{}
+  \label{map}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
+  \caption{}
+  \label{map}
+\end{figure}
+
 \section{Models and Methods}
 \label{section:Models_and_Methods}
-
-To determine the coefficients $a_o$ and $b_o$ in the frequency independent model, Model~1,
 
 \begin{linenomath*}
   \begin{equation}
@@ -62,13 +79,6 @@ To determine the coefficients $a_o$ and $b_o$ in the frequency independent model
 \label{Discussion}
 
 \section{Conclusions}
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=\textwidth]{figures/map.pdf}
-  \caption{Locations of measurement sites for GIC, at the Memanbetsu substation, and the geoelectric and geomagnetic field measurement site at Memanbetsu Magnetic Observatory. The red line corresponds to the path of the 187 kV power line. The distance from the observatory to the Memanbetsu substation is $\sim$9 km and dotted lines are Apex geomagnetic latitudes \citep{Richmond1995} in 2015.}
-  \label{map}
-\end{figure}
 
 \clearpage
 
