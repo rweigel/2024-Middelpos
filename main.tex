@@ -10,6 +10,9 @@
 
 %\journalname{Space Weather}
 
+% Journal options
+% https://docs.google.com/document/d/1hGGISS5dM__oSUb8JVXcjPFPBdVrGD_LNnkflubR6xw/edit
+
 \begin{document}
 
 \title{The Magnetotelluric Impedance at Middelpos, South Africa}
@@ -61,12 +64,21 @@ The $x$-axis of the magnetometer is aligned with geomagnetic North; the magnetic
 \section{Models and Methods}
 \label{section:Models_and_Methods}
 
+$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for $\mathcal{Z}$ in
+
 \begin{linenomath*}
-  \begin{equation}
-    G_o(t) = a_oE_x(t) + b_oE_y(t)
-    \label{model1}
-  \end{equation}
-\end{linenomath*}
+    \begin{equation}
+    \mathbf{E(\omega)} = \mathcal{Z(\omega)}\mathbf{B(\omega)}/\mu_0
+    \end{equation}
+    \noindent where
+    \begin{equation}
+    \mathcal{Z} = 
+    \begin{bmatrix}
+    Z_{xx}(\omega) & Z_{xy}(\omega)\\
+    Z_{yx}(\omega) & Z_{yy}(\omega)
+    \end{bmatrix}
+    \end{equation}
+    \end{linenomath*}
 
 \noindent
 
