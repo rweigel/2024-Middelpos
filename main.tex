@@ -12,7 +12,7 @@
 
 \begin{document}
 
-\title{Title}
+\title{The Magnetotelluric Impedance at Middelpos, South Africa}
 
 \authors{R.S. Weigel\affil{1} and P.J. Cilliers\affil{2}}
 
@@ -41,20 +41,21 @@ From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument
 
 The LEMI-417 instrument is designed for long--term recording of MT data and is comprised of a 3--axis fluxgate magnetometer from a  magnetometer and 2-axis E--field antenna. The instrument was installed in an open field near the small town Middelpos, South Africa (Geographic latitude -31.90605713$^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The unit is powered from batteries that are charged from a solar panel. We used 1--second cadence measurements from 2012-07-12 through 2012-11-07 (119 days).
 
-During installation, the X-axis of the magnetometer is aligned with geomagnetic North. The magnetic declination at Middelpos in 2020 was 23o 55.86’ W (IGRF-12 model, IGRF (2012)). The North-South leg of the E-field probes is aligned with the X-axis of the magnetometer. Figure 1 shows a photo of the instrument and Figure 2 shows an annotated Google Earth image of the instrument location and the E-field sensors.
+The $x$-axis of the magnetometer is aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was -23.2541323$^\circ$ (computed using the IGRF model [\cite{igrf}]). The North-South leg of the E-field probes is aligned with the $x$-axis of the magnetometer. Figure~\ref{fig:site} shows an annotated Google Earth image of the instrument location and the E-field sensors. The timestamp of the data is derived from a GPS chip in the LEMI-417. Data were retrieved manually during once-a-year site visits by technicians from The South African Space Agency (SANSA). The MT instrument at Middelpos is one of eight such instruments in Southern Africa. 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{figures/site.png}
-  \caption{}
-  \label{map}
+  \caption{Layout of the MT sensors of the Middelpos MT Station. MID N, MID S, MID E and MID W indicate the locations of the E-field electrodes. The distance between each pair of electrodes is 100 m. The LEMI-417 instrument is located at the crossing of the two E-field legs. The magnetometer is located 5 m from the electronics to minimize the impact of the currents in the LEMI-417 on the magnetometer measurements. 
+}
+ \label{fig:site}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
   \caption{}
-  \label{map}
+  \label{fig:timeseries}
 \end{figure}
 
 \section{Models and Methods}
@@ -126,6 +127,6 @@ During installation, the X-axis of the magnetometer is aligned with geomagnetic 
 
 \clearpage
 
-\bibliography{paper.bib}
+\bibliography{main.bib}
 
 \end{document}
