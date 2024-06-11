@@ -2,16 +2,20 @@
 \usepackage{apacite}
 \usepackage{url} % should fix any errors with URLs in refs.
 \usepackage{amsmath}
+\usepackage{url}
 %\usepackage{xcolor}
 %\usepackage[colorlinks]{hyperref}
-%\usepackage[colorinlistoftodos]{todonotes}
-
+\usepackage[colorinlistoftodos]{todonotes}
 \draftfalse
 
 %\journalname{Space Weather}
 
 % Journal options
 % https://docs.google.com/document/d/1hGGISS5dM__oSUb8JVXcjPFPBdVrGD_LNnkflubR6xw/edit
+
+\newcommand{\citeay}[1]{%
+\citeauthor{#1}, \citeyear{#1}%
+}
 
 \begin{document}
 
@@ -34,7 +38,7 @@
 \end{keypoints}
 
 \begin{abstract}
-From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument (LEMI-417, LEMI LLC, Ukraine)  made continuous 1-second recordings at a Middelpos, South Africa site.
+From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at a Middelpos, South Africa site.
 \end{abstract}
 
 \section{Introduction}
@@ -42,31 +46,34 @@ From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument
 \section{Data}
 \label{section:Data}
 
-The LEMI-417 instrument is designed for long--term recording of MT data and is comprised of a 3--axis fluxgate magnetometer from a  magnetometer and 2-axis E--field antenna. The instrument was installed in an open field near the small town Middelpos, South Africa (Geographic latitude -31.90605713$^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The unit is powered from batteries that are charged from a solar panel. We used 1--second cadence measurements from 2012-07-12 through 2012-11-07 (119 days).
+Data were obtained from the LEMI-417\todo{ref} instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude -31.90605713$^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged from a solar panel. The instrument at Middelpos is one of eight such MT instruments in Southern Africa.
 
-The $x$-axis of the magnetometer is aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was -23.2541323$^\circ$ (computed using the IGRF model [\cite{igrf}]). The North-South leg of the E-field probes is aligned with the $x$-axis of the magnetometer. Figure~\ref{fig:site} shows an annotated Google Earth image of the instrument location and the E-field sensors. The timestamp of the data is derived from a GPS chip in the LEMI-417. Data were retrieved manually during once-a-year site visits by technicians from The South African Space Agency (SANSA). The MT instrument at Middelpos is one of eight such instruments in Southern Africa. 
+The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} shows an annotated Google Earth image of the instrument location and the electric field probes. The timestamp of the data is derived from a GPS chip that is part of the LEMI-417 instrument. Data were retrieved manually by a site visit by South African Space Agency (SANSA) technicians. 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{figures/site.png}
-  \caption{Layout of the MT sensors of the Middelpos MT Station. MID N, MID S, MID E and MID W indicate the locations of the E-field electrodes. The distance between each pair of electrodes is 100 m. The LEMI-417 instrument is located at the crossing of the two E-field legs. The magnetometer is located 5 m from the electronics to minimize the impact of the currents in the LEMI-417 on the magnetometer measurements. 
+  \caption{Layout of the electric field sensors for the Middelpos MT Station. MID N, MID S, MID E, and MID W indicate the locations of the electric field electrodes. The distance between each pair of electrodes is $100$~m. The LEMI-417 unit is located at the crossing of the two electric field legs. The magnetometer was positioned $5$~m from the electronics to reduce the impact of the currents in the LEMI-417 instrument on the magnetometer measurements. 
 }
  \label{fig:site}
 \end{figure}
 
+The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of the $\mathbf{E}(t)$ measurements was despiked by finding times when $E_k(t+1)-E_k(t)\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x$ was $X$\todo{insert value} ($X$\%)\todo{insert value}; for $E_y$, the number was $X$ ($X$\%).
+
+The amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries} are shown in Figure~\ref{fig:dft}. The amplitudes shown are frequency--domain band averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evaluationperiods} of the Appendix. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$ was computed using $(1/|\widetilde{A}|)\sqrt{[A_r\Delta A_r]^2 + [A_i\Delta A_i]^2}$, where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency-- domain averages shown in Figure~\ref{fig:dft}.
 \newpage
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
-  \caption{}
+  \caption{Measurements used for analysis after mean subtraction and despiking.}
   \label{fig:timeseries}
 \end{figure}
 
 \begin{figure}[b]
   \centering
   \includegraphics[width=0.9\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}
-  \caption{}
+  \caption{Magnitudes of discrete Fourier transform coefficients for measurements in Figure~\ref{fig:timeseries}.}
   \label{fig:dft}
 \end{figure}
 
@@ -75,38 +82,70 @@ The $x$-axis of the magnetometer is aligned with geomagnetic North; the magnetic
 \section{Models and Methods}
 \label{section:Models_and_Methods}
 
-$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for $\mathcal{Z}$ in
+$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the transfer function $\boldsymbol{\mathcal{Z}}$ in
 
 \begin{linenomath*}
     \begin{equation}
-    \mathbf{E(\omega)} = \mathcal{Z(\omega)}\mathbf{B(\omega)}/\mu_0
+        \mathbf{E}(f_e) = \boldsymbol{\mathcal{
+    Z}}(f_e)\mathbf{B}(f_e)\text{ ,}
     \end{equation}
-    \noindent where
+\end{linenomath*}
+
+\noindent where $f_e$ is an ``evaluation frequency" and
+    
+\begin{linenomath*}
     \begin{equation}
-    \mathcal{Z} = 
-    \begin{bmatrix}
-    Z_{xx}(\omega) & Z_{xy}(\omega)\\
-    Z_{yx}(\omega) & Z_{yy}(\omega)
-    \end{bmatrix}
+        \boldsymbol{\mathcal{Z}}(f_e) = 
+            \begin{bmatrix}
+                Z_{xx}(f_e) & Z_{xy}(f_e)\\
+                Z_{yx}(f_e) & Z_{yy}(f_e)
+            \end{bmatrix}
     \end{equation}
-    \end{linenomath*}
+\end{linenomath*}
 
-\noindent
+\noindent using a method described by \citeay{Sims1971}: for each component $k=x,y$, a four parameter over--determined linear regression is performed using
 
-\section{Model Evaluation}
-\label{section:Model_Evaluation}
+\begin{equation}
+E_k(f) = Z_{kx}(f)B_x(f) + Z_{ky}(f)B_y(f)
+\end{equation}
+
+\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because each component of $\boldsymbol{\mathcal{Z}}$ is complex \citep{Egbert1986}).
+
+There are two general methods for computing estimates of $Z_{kx}$ and $Z_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform a regression using Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression in a band centered on the evaluation frequency, and then average the segment estimates of $Z_{kx}$ and $Z_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $Z_{kx}$ and $Z_{ky}$ are unweighted averages. 
+
+In addition, two methods have been used for computing the Fourier coefficients -- one uses the standard DFT formula, typically implemented using the FFT algorithm, and the other uses ``Cascade Decimation" \citep{Wight1980} to estimate the DFT and requires less memory. Here, we use the standard DFT formula.
+
+There are two common modifications of this ``Ordinary Least Squares" solution method. The first is the ``remote reference"  method\todo{ref}, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression\todo{ref}, which involves computing estimates of $Z_{kx}$ and $Z_{ky}$ using a custom error function instead of the standard sum--of--squares error function. The custom error function automatically down--weights outliers. In this work, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
 
 \section{Results}
-\label{Results}
+\label{section:Results}
 
-\section{Discussion}
-\label{Discussion}
+\begin{figure}
+  
+  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
+  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
+  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
+  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
 
-\section{Conclusions}
+  \caption{(a) blah (b) blah (c) blah (d) blah}
+ 
+\label{fig:z}
+\end{figure}
 
 \clearpage
 
-\section{Appendix}
+\section{Appendix A}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{figures/LEMI-417.jpg}
+  \caption{LEMI-417 instrument (Manual: \url{https://www.ggki.hu/~novak/PRG/LEMI-417/LEMI-417UMrev7.pdf}; image from \url{https://www.isr.lviv.ua/lemi417.htm})}
+  \label{fig:lemi}
+\end{figure}
+
+Figure X: The Middelpos MT instrument. The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument was mounted on two 25-liter water bottles to reduce temperature variation. The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.
+
+\section{Appendix B}
 
 \begin{table}
   \caption{Periods associated with evaluation frequency bands used for regression and smoothing spectra. \# is the evaluation frequency number, $N$ is the number of DFT points in the band, and $T_e\equiv 1/f_e$. The band range is from $T_l$ through $T_h$.}
