@@ -61,18 +61,19 @@ The $+x$-axes of both the magnetometer and electric field probe are aligned with
 The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of the $\mathbf{E}(t)$ measurements was despiked by finding times when $E_k(t+1)-E_k(t)\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x$ was $X$\todo{insert value} ($X$\%)\todo{insert value}; for $E_y$, the number was $X$ ($X$\%).
 
 The amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries} are shown in Figure~\ref{fig:dft}. The amplitudes shown are frequency--domain band averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evaluationperiods} of the Appendix. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$ was computed using $(1/|\widetilde{A}|)\sqrt{[A_r\Delta A_r]^2 + [A_i\Delta A_i]^2}$, where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency-- domain averages shown in Figure~\ref{fig:dft}.
-\newpage
 
-\begin{figure}[t]
+\clearpage
+
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
+  \includegraphics[width=0.65\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
   \caption{Measurements used for analysis after mean subtraction and despiking.}
   \label{fig:timeseries}
 \end{figure}
 
-\begin{figure}[b]
+\begin{figure}[h!]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}
+  \includegraphics[width=0.65\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}
   \caption{Magnitudes of discrete Fourier transform coefficients for measurements in Figure~\ref{fig:timeseries}.}
   \label{fig:dft}
 \end{figure}
@@ -113,26 +114,38 @@ E_k(f) = Z_{kx}(f)B_x(f) + Z_{ky}(f)B_y(f)
 
 There are two general methods for computing estimates of $Z_{kx}$ and $Z_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform a regression using Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression in a band centered on the evaluation frequency, and then average the segment estimates of $Z_{kx}$ and $Z_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $Z_{kx}$ and $Z_{ky}$ are unweighted averages. 
 
-In addition, two methods have been used for computing the Fourier coefficients -- one uses the standard DFT formula, typically implemented using the FFT algorithm, and the other uses ``Cascade Decimation" \citep{Wight1980} to estimate the DFT and requires less memory. Here, we use the standard DFT formula.
+For the components of $\boldsymbol{\mathcal{Z}}$ computed using one $116$--day segment, the standard error was computed using\todo{}. For the magnitudes computed using $116$ $1$--day segments, the standard error was computed using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were computed using\todo{}.
 
-There are two common modifications of this ``Ordinary Least Squares" solution method. The first is the ``remote reference"  method\todo{ref}, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression\todo{ref}, which involves computing estimates of $Z_{kx}$ and $Z_{ky}$ using a custom error function instead of the standard sum--of--squares error function. The custom error function automatically down--weights outliers. In this work, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
-
+(In addition, two methods have been used for computing the Fourier coefficients -- one uses the standard DFT formula, typically implemented using the FFT algorithm, and the other uses ``Cascade Decimation" \citep{Wight1980} to estimate the DFT and requires less memory. Here, we use the standard DFT formula. Also, there are two common modifications of this ``Ordinary Least Squares" solution method. The first is the ``remote reference"  method\todo{ref}, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression\todo{ref}, which involves computing estimates of $Z_{kx}$ and $Z_{ky}$ using a custom error function instead of the standard sum--of--squares error function. The custom error function automatically down--weights outliers. In this work, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.)
 \section{Results}
 \label{section:Results}
 
+Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}.
+
+The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity. The signal--to--error ratio was computed by\todo{}.
+
 \begin{figure}
   
-  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
-  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
-  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
-  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/site.png}} 
+  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xx.pdf}} 
+  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xy.pdf}} 
+  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yx.pdf}} 
+  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yy.pdf}} 
 
-  \caption{(a) blah (b) blah (c) blah (d) blah}
+  \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{Z}}$: (a) $Z_{xx}$ and $\phi_{xx}$; (b) $Z_{xy}$ and $\phi_{xy}$; (c) $Z_{yx}$ and $\phi_{yx}$; and (d) $Z_{yy}$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero.}
  
 \label{fig:z}
 \end{figure}
 
+\begin{figure}
+  
+  \caption{}
+ 
+\label{fig:se}
+\end{figure}
+
 \clearpage
+
+\section{Discussion}
 
 \section{Appendix A}
 
@@ -143,7 +156,7 @@ There are two common modifications of this ``Ordinary Least Squares" solution me
   \label{fig:lemi}
 \end{figure}
 
-Figure X: The Middelpos MT instrument. The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument was mounted on two 25-liter water bottles to reduce temperature variation. The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.
+Figure~\ref{fig:lemi}: The Middelpos MT instrument. The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument is mounted on two 25-liter water bottles to reduce temperature variation. The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.
 
 \section{Appendix B}
 
