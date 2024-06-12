@@ -124,24 +124,26 @@ Figure~\ref{fig:z} shows the results of the regression described in Section~\ref
 
 The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity. The signal--to--error ratio was computed by\todo{}.
 
-\begin{figure}
-  
+\begin{figure}[h!]
+  \vspace{-1em}
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xx.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xy.pdf}} 
   \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yx.pdf}} 
   \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yy.pdf}} 
 
   \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{Z}}$: (a) $Z_{xx}$ and $\phi_{xx}$; (b) $Z_{xy}$ and $\phi_{xy}$; (c) $Z_{yx}$ and $\phi_{yx}$; and (d) $Z_{yy}$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero.}
- 
-\label{fig:z}
+    \label{fig:z}
+
+  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1-E_x.pdf}} 
+  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1-E_y.pdf}} 
+
+  \caption{Model metrics for (a) $E_x$, corresponding to Figure~\ref{fig:z}(a)-(b) and (b) $E_y$, corresponding to Figure~\ref{fig:z}(b)-(c).}
+  \label{fig:se}
+
 \end{figure}
 
-\begin{figure}
-  
-  \caption{}
- 
-\label{fig:se}
-\end{figure}
+%\begin{figure}[h!] 
+%\end{figure}
 
 \clearpage
 
