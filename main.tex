@@ -6,6 +6,9 @@
 %\usepackage{xcolor}
 %\usepackage[colorlinks]{hyperref}
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{subfig}
+\usepackage[demo]{graphicx}
+
 \draftfalse
 
 %\journalname{Space Weather}
@@ -19,26 +22,23 @@
 
 \begin{document}
 
-\title{The Magnetotelluric Impedance at Middelpos, South Africa}
+\title{The Magnetotelluric Impedance Middelpos, South Africa}
 
 \authors{R.S. Weigel\affil{1} and P.J. Cilliers\affil{2}}
 
-\affiliation{1}{Space Weather Lab, George Mason University}
-\affiliation{2}{South African National Space Agency}
-
-\affiliation{1}{4400 University Drive, Fairfax VA 22030}
-\affiliation{2}{Hospital Street, Hermanus 7200}
+\affiliation{1}{Space Weather Lab, George Mason University, 4400 University Drive, Fairfax VA 22030}
+\affiliation{2}{South African National Space Agency, Hospital Street, Hermanus, 7200}
 
 \correspondingauthor{R.S. Weigel}{rweigel@gmu.edu}
 
-\begin{keypoints}
-\item 
-\item 
-\item 
-\end{keypoints}
+%\begin{keypoints}
+%\item 
+%\item 
+%\item 
+%\end{keypoints}
 
 \begin{abstract}
-From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at a Middelpos, South Africa site.
+From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South Africa site.
 \end{abstract}
 
 \section{Introduction}
@@ -46,49 +46,40 @@ From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument
 \section{Data}
 \label{section:Data}
 
-Data were obtained from the LEMI-417\todo{ref} instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude -31.90605713$^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged from a solar panel. The instrument at Middelpos is one of eight such MT instruments in Southern Africa.
+Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight such MT instruments in Southern Africa managed by the South African Space Agency (SANSA).
 
-The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} shows an annotated Google Earth image of the instrument location and the electric field probes. The timestamp of the data is derived from a GPS chip that is part of the LEMI-417 instrument. Data were retrieved manually by a site visit by South African Space Agency (SANSA) technicians. 
+The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} is an annotated Google Earth image of the instrument location and electric field probes. The timestamp of the measurements is derived from a GPS chip that is part of the LEMI-417 instrument. Data were manually retrieved by a site visit by SANSA technicians. 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{figures/site.png}
-  \caption{Layout of the electric field sensors for the Middelpos MT Station. MID N, MID S, MID E, and MID W indicate the locations of the electric field electrodes. The distance between each pair of electrodes is $100$~m. The LEMI-417 unit is located at the crossing of the two electric field legs. The magnetometer was positioned $5$~m from the electronics to reduce the impact of the currents in the LEMI-417 instrument on the magnetometer measurements. 
+  \caption{Layout of the MT instrumentation at Middelpos. MID N(orth), MID S(south), MID E(ast), and MID W(est) indicate the locations of the electric field electrodes. The length of each electrode line is $100$~m. The LEMI-417 instrument is located at the crossing of the two electrode lines. The magnetometer is positioned $5$~m from the LEMI-417 to reduce the impact of the instrument currents on the magnetometer measurements. 
 }
  \label{fig:site}
 \end{figure}
 
-The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of the $\mathbf{E}(t)$ measurements was despiked by finding times when $E_k(t+1)-E_k(t)\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x$ was $X$\todo{insert value} ($X$\%)\todo{insert value}; for $E_y$, the number was $X$ ($X$\%).
+The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $X$\todo{insert value} ($X$\%)\todo{insert value}; for $E_y(t)$, the number was $X$ ($X$\%).
 
-The amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries} are shown in Figure~\ref{fig:dft}. The amplitudes shown are frequency--domain band averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evaluationperiods} of the Appendix. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$ was computed using $(1/|\widetilde{A}|)\sqrt{[A_r\Delta A_r]^2 + [A_i\Delta A_i]^2}$, where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency-- domain averages shown in Figure~\ref{fig:dft}.
+The amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The amplitudes shown are frequency--domain band averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs1d} of Appendix±~B. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, was computed using $(1/|\widetilde{A}|)\sqrt{[A_r\Delta A_r]^2 + [A_i\Delta A_i]^2}$, where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency--domain averages shown in Figure~\ref{fig:dft}. The 95\% confidence interval lengths for the averages $A_r$ and $A_i$ were determined using $\pm t^{-1}_{n-1}(0.025) (s/\sqrt{n})$, where $n$ is the number of values used to compute the average, $t^{-1}_{n-1}$ is the inverse t-distribution, and $s$ is the sample standard deviation.
 
-\clearpage
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.65\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
-  \caption{Measurements used for analysis after mean subtraction and despiking.}
+\begin{figure}
+     \centering
+     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
+    \hfill
+     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
+     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
   \label{fig:timeseries}
 \end{figure}
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=0.65\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}
-  \caption{Magnitudes of discrete Fourier transform coefficients for measurements in Figure~\ref{fig:timeseries}.}
-  \label{fig:dft}
-\end{figure}
-
-\clearpage
 
 \section{Models and Methods}
 \label{section:Models_and_Methods}
 
-$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the transfer function $\boldsymbol{\mathcal{Z}}$ in
+$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the transfer function $\boldsymbol{\mathcal{\widetilde{Z}}}$ in
 
 \begin{linenomath*}
     \begin{equation}
-        \mathbf{E}(f_e) = \boldsymbol{\mathcal{
-    Z}}(f_e)\mathbf{B}(f_e)\text{ ,}
+        \mathbf{\widetilde{E}}(f_e) = \boldsymbol{\mathcal{
+    \widetilde{Z}}}(f_e)\mathbf{\widetilde{B}}(f_e)\text{ ,}
     \end{equation}
 \end{linenomath*}
 
@@ -96,48 +87,85 @@ $\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the trans
     
 \begin{linenomath*}
     \begin{equation}
-        \boldsymbol{\mathcal{Z}}(f_e) = 
+        \boldsymbol{\mathcal{\widetilde{Z}}}(f_e) = 
             \begin{bmatrix}
-                Z_{xx}(f_e) & Z_{xy}(f_e)\\
-                Z_{yx}(f_e) & Z_{yy}(f_e)
+                \widetilde{Z}_{xx}(f_e) & \widetilde{Z}_{xy}(f_e)\\
+                \widetilde{Z}_{yx}(f_e) & \widetilde{Z}_{yy}(f_e)
             \end{bmatrix}
     \end{equation}
 \end{linenomath*}
 
-\noindent using a method described by \citeay{Sims1971}: for each component $k=x,y$, a four parameter over--determined linear regression is performed using
+\noindent using a method described by \citeay{Sims1971}: for each $\mathbf{\widetilde{E}}$ vector component $k=x,y$, a four parameter over--determined linear regression is performed using
 
 \begin{equation}
-E_k(f) = Z_{kx}(f)B_x(f) + Z_{ky}(f)B_y(f)
+\widetilde{E}_k(f) = \widetilde{Z}_{kx}(f)B_x(f) + \widetilde{Z}_{ky}(f)B_y(f)
+\label{eqn:single}
 \end{equation}
 
-\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because each component of $\boldsymbol{\mathcal{Z}}$ is complex \citep{Egbert1986}).
+\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because the two regression parameters $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ in Equation~\ref{eqn:single} are complex--valued \citep{Egbert1986}).
 
-There are two general methods for computing estimates of $Z_{kx}$ and $Z_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform a regression using Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression in a band centered on the evaluation frequency, and then average the segment estimates of $Z_{kx}$ and $Z_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $Z_{kx}$ and $Z_{ky}$ are unweighted averages. 
+Two methods have been used for computing the Fourier coefficients -- one uses the standard DFT (Discrete Fourier Transform) formula, typically implemented using the FFT algorithm, and the other is an approximation based on the method of ``Cascade Decimation" \citep{Wight1980}, which requires less memory. Here, we use the standard DFT formula.
 
-For the components of $\boldsymbol{\mathcal{Z}}$ computed using one $116$--day segment, the standard error was computed using\todo{}. For the magnitudes computed using $116$ $1$--day segments, the standard error was computed using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were computed using\todo{}.
+There are two general methods for computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform a regression using Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression on each segment in a band centered on the evaluation frequency, and then average the segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ are unweighted averages. 
 
-(In addition, two methods have been used for computing the Fourier coefficients -- one uses the standard DFT formula, typically implemented using the FFT algorithm, and the other uses ``Cascade Decimation" \citep{Wight1980} to estimate the DFT and requires less memory. Here, we use the standard DFT formula. Also, there are two common modifications of this ``Ordinary Least Squares" solution method. The first is the ``remote reference"  method\todo{ref}, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression\todo{ref}, which involves computing estimates of $Z_{kx}$ and $Z_{ky}$ using a custom error function instead of the standard sum--of--squares error function. The custom error function automatically down--weights outliers. In this work, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.)
+There are two common modifications of the regression solution method. The first is the ``remote reference"  method, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically downweights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
+
 \section{Results}
 \label{section:Results}
 
-Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}.
+Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $119$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the $119$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using
 
-The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity. The signal--to--error ratio was computed by\todo{}.
+$$\Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2) \sqrt{ \big[\text{Im}(\widetilde{Z}_{ij})\text{Re}(\Delta \widetilde{Z}_{ij})\big]^2 + \big[\text{Re}(\widetilde{Z}_{ij})\text{Im}(\Delta \widetilde{Z}_{ij}) \big]^2}\;$$
+
+\noindent where $\Delta \widetilde{Z}_{ij}$ is the 95\% confidence interval length for element $\widetilde{Z}_{ij}$ of $\boldsymbol{\mathcal{\widetilde{Z}}}$, $|\boldsymbol{\cdotp}|$ is the complex magnitude, and $\text{Re}(\boldsymbol{\cdotp})$ and $\text{Im}(\boldsymbol{\cdotp})$ are the real and imaginary parts of the argument, respectively.
+
+The signal--to--error ratio, $\text{SE}_k(f_e)$ for component $k=x,y$ was calculated using 
+
+\begin{equation}
+\text{SE}_k(f_e) = \frac{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{E}_k(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e}\left|\Delta\widetilde{E}_k(f_j)\right|^2}
+\end{equation}
+
+\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} list the band centers, ranges, and number of frequencies, $N_e$ in each band. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the DFT of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 119$ points. At grid frequencies outside of the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+
+The coherence, $\text{Coh}_{XY}(f_e)$, was computed using
+
+\begin{equation}
+\text{Coh}^2_{XY}(f_e) = \frac{\left|\displaystyle\sum_{j=1}^{N_e}\widetilde{X}^*(f_j)\widetilde{Y}(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{X}(f_j)\right|^2\sum_{j=1}^{N_e} \left|\widetilde{Y}(f_j)\right|^2}
+\end{equation}
+
+\noindent where the summation frequencies and $f_e$ values are the same as those used for computing the $\text{SE}$. 95\% error bars were computed using the same as $\text{SE}$. The coherence was computed between the predicted field, $E^\text{p}_k$, and the measured field, $E_k$, and also between $E_x^\text{p}$ and $B_y$ and between $E_y^\text{p}$ and $B_x$.
+
+
+
+%sxx = abs(sum(dftsegsx{s}.*conj(dftsegsx{s}),1));
+%syy = abs(sum(dftsegsy{s}.*conj(dftsegsy{s}),1));
+%sxy = abs(sum(conj(dftsegsx{s}).*dftsegsy{s},1));
+%cxy(s,:) = sqrt(sxy/sqrt(sxx*syy));
+
+\begin{figure}
+     \centering
+     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
+    \hfill
+     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
+     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
+  \label{fig:timeseries}
+\end{figure}
+
 
 \begin{figure}[h!]
-  \vspace{-1em}
+  \vspace{-2em}
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xx.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_xy.pdf}} 
   \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yx.pdf}} 
   \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1-Z_yy.pdf}} 
 
-  \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{Z}}$: (a) $Z_{xx}$ and $\phi_{xx}$; (b) $Z_{xy}$ and $\phi_{xy}$; (c) $Z_{yx}$ and $\phi_{yx}$; and (d) $Z_{yy}$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero.}
+  \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{\widetilde{Z}}}$: (a) $|\widetilde{Z}_{xx}|$ and $\phi_{xx}$; (b) $|\widetilde{Z}_{xy}|$ and $\phi_{xy}$; (c) $|\widetilde{Z}_{yx}|$ and $\phi_{yx}$; and (d) $|\widetilde{Z}_{yy}|$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero. The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity.}
     \label{fig:z}
 
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1-E_x.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1-E_y.pdf}} 
 
-  \caption{Model metrics for (a) $E_x$, corresponding to Figure~\ref{fig:z}(a)-(b) and (b) $E_y$, corresponding to Figure~\ref{fig:z}(b)-(c).}
+  \caption{Model metrics for (a) $E_x$, which depends on $\widetilde{Z}_{xx}$ and $\widetilde{Z}_{xy}$ shown in Figure~\ref{fig:z}(a)-(b) and (b) $E_y$, which depends on $\widetilde{Z}_{yx}$ and $\widetilde{Z}_{yy}$ shown in  Figure~\ref{fig:z}(b)-(c).}
   \label{fig:se}
 
 \end{figure}
@@ -153,53 +181,113 @@ The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\textwidth]{figures/LEMI-417.jpg}
-  \caption{LEMI-417 instrument (Manual: \url{https://www.ggki.hu/~novak/PRG/LEMI-417/LEMI-417UMrev7.pdf}; image from \url{https://www.isr.lviv.ua/lemi417.htm})}
+  (a)
+  \includegraphics[width=0.45\textwidth]{figures/instrument.pdf}
+  (b)
+  \includegraphics[width=0.45\textwidth]{figures/solarpanel.pdf}
+  \caption{The Middelpos MT instrument. (a) The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument is mounted on two 25-liter water bottles to reduce temperature variation. (b) The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.}
   \label{fig:lemi}
 \end{figure}
-
-Figure~\ref{fig:lemi}: The Middelpos MT instrument. The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument is mounted on two 25-liter water bottles to reduce temperature variation. The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.
 
 \section{Appendix B}
 
 \begin{table}
-  \caption{Periods associated with evaluation frequency bands used for regression and smoothing spectra. \# is the evaluation frequency number, $N$ is the number of DFT points in the band, and $T_e\equiv 1/f_e$. The band range is from $T_l$ through $T_h$.}
+  \caption{Evaluation frequencies, $f_e$, and periods, $T_e$, associated with evaluation frequency bands used for regression and spectra averaging using one--day segments. Subscript $l$ indicates a lower band bound and subscript $u$ an upper band bound. $i_l$ and $i_h$ are the lower and upper DFT frequency numbers, and $N_e$ is the number of DFT points in the band. $T=1/f$ and $i=1/86400$ for all subscripts.}
   \centering
-  \begin{tabular}{l l l l l}
-    \hline \\
-    \# & $N$ & $T_e$ [s] & $T_l$ [s] & $T_h$ [s] \\
-    \hline \\
-    1 & 2 & 43200 & 28800 & 86400 \\
-    2 & 2 & 28800 & 21600 & 43200 \\
-    3 & 3 & 21600 & 14400 & 43200 \\
-    4 & 4 & 14400 & 9600 & 28800 \\
-    5 & 5 & 10800 & 7200 & 21600 \\
-    6 & 6 & 7854.5 & 5400 & 14400 \\
-    7 & 8 & 5760 & 3927.3 & 10800 \\
-    8 & 12 & 3927.3 & 2618.2 & 7854.5 \\
-    9 & 16 & 2880 & 1920 & 5760 \\
-    10 & 22 & 2009.3 & 1350 & 3927.3 \\
-    11 & 31 & 1440 & 960 & 2880 \\
-    12 & 43 & 1016.5 & 680.3 & 2009.3 \\
-    13 & 61 & 720 & 480 & 1440 \\
-    14 & 85 & 511.2 & 341.5 & 1016.5 \\
-    15 & 120 & 361.5 & 241.3 & 720 \\
-    16 & 170 & 255.6 & 170.4 & 511.2 \\
-    17 & 240 & 180.8 & 120.5 & 361.5 \\
-    18 & 338 & 128 & 85.4 & 255.6 \\
-    19 & 478 & 90.5 & 60.3 & 180.8 \\
-    20 & 676 & 64 & 42.7 & 128 \\
-    21 & 956 & 45.2 & 30.2 & 90.5 \\
-    22 & 1351 & 32 & 21.3 & 64 \\
-    23 & 1910 & 22.6 & 15.1 & 45.2 \\
-    24 & 2701 & 16 & 10.7 & 32 \\
-    25 & 3819 & 11.3 & 7.5 & 22.6 \\
-    26 & 5401 & 8 & 5.3 & 16 \\
-    27 & 7638 & 5.7 & 3.8 & 11.3 \\
-    28 & 10801 & 4 & 2.7 & 8 \\
-    \hline \\
-  \end{tabular}
-  \label{evaluationperiods}
+  \small
+\begin{tabular}{c c c c c c c c c}
+\hline
+$f_e$ [Hz] & $f_l$ [Hz] & $f_u$ [Hz] & $T_e$ [s] & $T_l$ [s] & $T_u$ [s] & $i_l$ & $i_u$ & $N_e$ \\
+\hline
+$2.31\cdot 10^{-5}$ & $1.16\cdot 10^{-5}$ & $3.47\cdot 10^{-5}$ & $4.32\cdot 10^{4}$ & $2.88\cdot 10^{4}$ & $8.64\cdot 10^{4}$ & $         2$ & $         4$ & $      3$\\
+$3.47\cdot 10^{-5}$ & $2.31\cdot 10^{-5}$ & $4.63\cdot 10^{-5}$ & $2.88\cdot 10^{4}$ & $2.16\cdot 10^{4}$ & $4.32\cdot 10^{4}$ & $         3$ & $         5$ & $      3$\\
+$4.63\cdot 10^{-5}$ & $3.47\cdot 10^{-5}$ & $5.79\cdot 10^{-5}$ & $2.16\cdot 10^{4}$ & $1.73\cdot 10^{4}$ & $2.88\cdot 10^{4}$ & $         4$ & $         6$ & $      3$\\
+$6.94\cdot 10^{-5}$ & $4.63\cdot 10^{-5}$ & $9.26\cdot 10^{-5}$ & $1.44\cdot 10^{4}$ & $1.08\cdot 10^{4}$ & $2.16\cdot 10^{4}$ & $         5$ & $         9$ & $      5$\\
+$9.26\cdot 10^{-5}$ & $6.94\cdot 10^{-5}$ & $1.16\cdot 10^{-4}$ & $1.08\cdot 10^{4}$ & $8.64\cdot 10^{3}$ & $1.44\cdot 10^{4}$ & $         7$ & $        11$ & $      5$\\
+$1.27\cdot 10^{-4}$ & $9.26\cdot 10^{-5}$ & $1.62\cdot 10^{-4}$ & $7.85\cdot 10^{3}$ & $6.17\cdot 10^{3}$ & $1.08\cdot 10^{4}$ & $         9$ & $        15$ & $      7$\\
+$1.85\cdot 10^{-4}$ & $1.27\cdot 10^{-4}$ & $2.43\cdot 10^{-4}$ & $5.40\cdot 10^{3}$ & $4.11\cdot 10^{3}$ & $7.85\cdot 10^{3}$ & $        12$ & $        22$ & $     11$\\
+$2.55\cdot 10^{-4}$ & $1.85\cdot 10^{-4}$ & $3.24\cdot 10^{-4}$ & $3.93\cdot 10^{3}$ & $3.09\cdot 10^{3}$ & $5.40\cdot 10^{3}$ & $        17$ & $        29$ & $     13$\\
+$3.59\cdot 10^{-4}$ & $2.55\cdot 10^{-4}$ & $4.63\cdot 10^{-4}$ & $2.79\cdot 10^{3}$ & $2.16\cdot 10^{3}$ & $3.93\cdot 10^{3}$ & $        23$ & $        41$ & $     19$\\
+$5.09\cdot 10^{-4}$ & $3.59\cdot 10^{-4}$ & $6.60\cdot 10^{-4}$ & $1.96\cdot 10^{3}$ & $1.52\cdot 10^{3}$ & $2.79\cdot 10^{3}$ & $        32$ & $        58$ & $     27$\\
+$7.18\cdot 10^{-4}$ & $5.09\cdot 10^{-4}$ & $9.26\cdot 10^{-4}$ & $1.39\cdot 10^{3}$ & $1.08\cdot 10^{3}$ & $1.96\cdot 10^{3}$ & $        45$ & $        81$ & $     37$\\
+$1.02\cdot 10^{-3}$ & $7.18\cdot 10^{-4}$ & $1.32\cdot 10^{-3}$ & $9.82\cdot 10^{2}$ & $7.58\cdot 10^{2}$ & $1.39\cdot 10^{3}$ & $        63$ & $       115$ & $     53$\\
+$1.44\cdot 10^{-3}$ & $1.02\cdot 10^{-3}$ & $1.85\cdot 10^{-3}$ & $6.97\cdot 10^{2}$ & $5.40\cdot 10^{2}$ & $9.82\cdot 10^{2}$ & $        89$ & $       161$ & $     73$\\
+$2.03\cdot 10^{-3}$ & $1.44\cdot 10^{-3}$ & $2.62\cdot 10^{-3}$ & $4.94\cdot 10^{2}$ & $3.82\cdot 10^{2}$ & $6.97\cdot 10^{2}$ & $       125$ & $       227$ & $    103$\\
+$2.86\cdot 10^{-3}$ & $2.03\cdot 10^{-3}$ & $3.69\cdot 10^{-3}$ & $3.50\cdot 10^{2}$ & $2.71\cdot 10^{2}$ & $4.94\cdot 10^{2}$ & $       176$ & $       320$ & $    145$\\
+$4.03\cdot 10^{-3}$ & $2.86\cdot 10^{-3}$ & $5.20\cdot 10^{-3}$ & $2.48\cdot 10^{2}$ & $1.92\cdot 10^{2}$ & $3.50\cdot 10^{2}$ & $       248$ & $       450$ & $    203$\\
+$5.68\cdot 10^{-3}$ & $4.03\cdot 10^{-3}$ & $7.34\cdot 10^{-3}$ & $1.76\cdot 10^{2}$ & $1.36\cdot 10^{2}$ & $2.48\cdot 10^{2}$ & $       349$ & $       635$ & $    287$\\
+$8.02\cdot 10^{-3}$ & $5.68\cdot 10^{-3}$ & $1.04\cdot 10^{-2}$ & $1.25\cdot 10^{2}$ & $9.65\cdot 10^{1}$ & $1.76\cdot 10^{2}$ & $       492$ & $       896$ & $    405$\\
+$1.13\cdot 10^{-2}$ & $8.02\cdot 10^{-3}$ & $1.46\cdot 10^{-2}$ & $8.84\cdot 10^{1}$ & $6.85\cdot 10^{1}$ & $1.25\cdot 10^{2}$ & $       694$ & $      1262$ & $    569$\\
+$1.59\cdot 10^{-2}$ & $1.13\cdot 10^{-2}$ & $2.06\cdot 10^{-2}$ & $6.27\cdot 10^{1}$ & $4.86\cdot 10^{1}$ & $8.84\cdot 10^{1}$ & $       978$ & $      1780$ & $    803$\\
+$2.25\cdot 10^{-2}$ & $1.59\cdot 10^{-2}$ & $2.91\cdot 10^{-2}$ & $4.44\cdot 10^{1}$ & $3.44\cdot 10^{1}$ & $6.27\cdot 10^{1}$ & $      1379$ & $      2511$ & $   1133$\\
+$3.17\cdot 10^{-2}$ & $2.25\cdot 10^{-2}$ & $4.10\cdot 10^{-2}$ & $3.15\cdot 10^{1}$ & $2.44\cdot 10^{1}$ & $4.44\cdot 10^{1}$ & $      1945$ & $      3541$ & $   1597$\\
+$4.48\cdot 10^{-2}$ & $3.17\cdot 10^{-2}$ & $5.78\cdot 10^{-2}$ & $2.23\cdot 10^{1}$ & $1.73\cdot 10^{1}$ & $3.15\cdot 10^{1}$ & $      2743$ & $      4995$ & $   2253$\\
+$6.31\cdot 10^{-2}$ & $4.48\cdot 10^{-2}$ & $8.15\cdot 10^{-2}$ & $1.58\cdot 10^{1}$ & $1.23\cdot 10^{1}$ & $2.23\cdot 10^{1}$ & $      3869$ & $      7045$ & $   3177$\\
+$8.91\cdot 10^{-2}$ & $6.31\cdot 10^{-2}$ & $1.15\cdot 10^{-1}$ & $1.12\cdot 10^{1}$ & $8.69\cdot 10^{0}$ & $1.58\cdot 10^{1}$ & $      5457$ & $      9939$ & $   4483$\\
+$1.26\cdot 10^{-1}$ & $8.91\cdot 10^{-2}$ & $1.62\cdot 10^{-1}$ & $7.96\cdot 10^{0}$ & $6.16\cdot 10^{0}$ & $1.12\cdot 10^{1}$ & $      7698$ & $     14016$ & $   6319$\\
+$1.77\cdot 10^{-1}$ & $1.26\cdot 10^{-1}$ & $2.29\cdot 10^{-1}$ & $5.64\cdot 10^{0}$ & $4.37\cdot 10^{0}$ & $7.96\cdot 10^{0}$ & $     10857$ & $     19771$ & $   8915$\\
+$2.50\cdot 10^{-1}$ & $1.77\cdot 10^{-1}$ & $3.23\cdot 10^{-1}$ & $4.00\cdot 10^{0}$ & $3.10\cdot 10^{0}$ & $5.64\cdot 10^{0}$ & $     15314$ & $     27888$ & $  12575$\\
+\hline \\
+\end{tabular}
+\label{table:evalfreqs1d}
+\end{table}
+
+\clearpage
+
+\begin{table}
+  \caption{Same as Figure~\ref{table:evalfreqs1d} except for the regression and spectra averaging for one 119--day segment and $i=1/(86400\cdot 119)=1/(10,281,600)$.}
+  \centering
+  \small
+\begin{tabular}{c c c c c c c c c}
+\hline
+$f_e$ [Hz] & $f_l$ [Hz] & $f_u$ [Hz] & $T_e$ [s] & $T_l$ [s] & $T_u$ [s] & $i_l$ & $i_u$ & $N_e$ \\
+\hline
+$1.95\cdot 10^{-7}$ & $9.73\cdot 10^{-8}$ & $2.92\cdot 10^{-7}$ & $5.14\cdot 10^{6}$ & $3.43\cdot 10^{6}$ & $1.03\cdot 10^{7}$ & $         2$ & $         4$ & $      3$\\
+$2.92\cdot 10^{-7}$ & $1.95\cdot 10^{-7}$ & $3.89\cdot 10^{-7}$ & $3.43\cdot 10^{6}$ & $2.57\cdot 10^{6}$ & $5.14\cdot 10^{6}$ & $         3$ & $         5$ & $      3$\\
+$3.89\cdot 10^{-7}$ & $2.92\cdot 10^{-7}$ & $4.86\cdot 10^{-7}$ & $2.57\cdot 10^{6}$ & $2.06\cdot 10^{6}$ & $3.43\cdot 10^{6}$ & $         4$ & $         6$ & $      3$\\
+$4.86\cdot 10^{-7}$ & $3.89\cdot 10^{-7}$ & $5.84\cdot 10^{-7}$ & $2.06\cdot 10^{6}$ & $1.71\cdot 10^{6}$ & $2.57\cdot 10^{6}$ & $         5$ & $         7$ & $      3$\\
+$7.78\cdot 10^{-7}$ & $4.86\cdot 10^{-7}$ & $1.07\cdot 10^{-6}$ & $1.29\cdot 10^{6}$ & $9.35\cdot 10^{5}$ & $2.06\cdot 10^{6}$ & $         6$ & $        12$ & $      7$\\
+$1.07\cdot 10^{-6}$ & $7.78\cdot 10^{-7}$ & $1.36\cdot 10^{-6}$ & $9.35\cdot 10^{5}$ & $7.34\cdot 10^{5}$ & $1.29\cdot 10^{6}$ & $         9$ & $        15$ & $      7$\\
+$1.46\cdot 10^{-6}$ & $1.07\cdot 10^{-6}$ & $1.85\cdot 10^{-6}$ & $6.85\cdot 10^{5}$ & $5.41\cdot 10^{5}$ & $9.35\cdot 10^{5}$ & $        12$ & $        20$ & $      9$\\
+$2.04\cdot 10^{-6}$ & $1.46\cdot 10^{-6}$ & $2.63\cdot 10^{-6}$ & $4.90\cdot 10^{5}$ & $3.81\cdot 10^{5}$ & $6.85\cdot 10^{5}$ & $        16$ & $        28$ & $     13$\\
+$2.82\cdot 10^{-6}$ & $2.04\cdot 10^{-6}$ & $3.60\cdot 10^{-6}$ & $3.55\cdot 10^{5}$ & $2.78\cdot 10^{5}$ & $4.90\cdot 10^{5}$ & $        22$ & $        38$ & $     17$\\
+$3.99\cdot 10^{-6}$ & $2.82\cdot 10^{-6}$ & $5.15\cdot 10^{-6}$ & $2.51\cdot 10^{5}$ & $1.94\cdot 10^{5}$ & $3.55\cdot 10^{5}$ & $        30$ & $        54$ & $     25$\\
+$5.54\cdot 10^{-6}$ & $3.99\cdot 10^{-6}$ & $7.10\cdot 10^{-6}$ & $1.80\cdot 10^{5}$ & $1.41\cdot 10^{5}$ & $2.51\cdot 10^{5}$ & $        42$ & $        74$ & $     33$\\
+$7.78\cdot 10^{-6}$ & $5.54\cdot 10^{-6}$ & $1.00\cdot 10^{-5}$ & $1.29\cdot 10^{5}$ & $9.98\cdot 10^{4}$ & $1.80\cdot 10^{5}$ & $        58$ & $       104$ & $     47$\\
+$1.08\cdot 10^{-5}$ & $7.78\cdot 10^{-6}$ & $1.38\cdot 10^{-5}$ & $9.26\cdot 10^{4}$ & $7.24\cdot 10^{4}$ & $1.29\cdot 10^{5}$ & $        81$ & $       143$ & $     63$\\
+$1.52\cdot 10^{-5}$ & $1.08\cdot 10^{-5}$ & $1.95\cdot 10^{-5}$ & $6.59\cdot 10^{4}$ & $5.12\cdot 10^{4}$ & $9.26\cdot 10^{4}$ & $       112$ & $       202$ & $     91$\\
+$2.11\cdot 10^{-5}$ & $1.52\cdot 10^{-5}$ & $2.70\cdot 10^{-5}$ & $4.74\cdot 10^{4}$ & $3.70\cdot 10^{4}$ & $6.59\cdot 10^{4}$ & $       157$ & $       279$ & $    123$\\
+$2.96\cdot 10^{-5}$ & $2.11\cdot 10^{-5}$ & $3.80\cdot 10^{-5}$ & $3.38\cdot 10^{4}$ & $2.63\cdot 10^{4}$ & $4.74\cdot 10^{4}$ & $       218$ & $       392$ & $    175$\\
+$4.13\cdot 10^{-5}$ & $2.96\cdot 10^{-5}$ & $5.31\cdot 10^{-5}$ & $2.42\cdot 10^{4}$ & $1.88\cdot 10^{4}$ & $3.38\cdot 10^{4}$ & $       305$ & $       547$ & $    243$\\
+$5.78\cdot 10^{-5}$ & $4.13\cdot 10^{-5}$ & $7.42\cdot 10^{-5}$ & $1.73\cdot 10^{4}$ & $1.35\cdot 10^{4}$ & $2.42\cdot 10^{4}$ & $       426$ & $       764$ & $    339$\\
+$8.07\cdot 10^{-5}$ & $5.78\cdot 10^{-5}$ & $1.04\cdot 10^{-4}$ & $1.24\cdot 10^{4}$ & $9.65\cdot 10^{3}$ & $1.73\cdot 10^{4}$ & $       595$ & $      1067$ & $    473$\\
+$1.13\cdot 10^{-4}$ & $8.07\cdot 10^{-5}$ & $1.45\cdot 10^{-4}$ & $8.86\cdot 10^{3}$ & $6.90\cdot 10^{3}$ & $1.24\cdot 10^{4}$ & $       831$ & $      1491$ & $    661$\\
+$1.58\cdot 10^{-4}$ & $1.13\cdot 10^{-4}$ & $2.03\cdot 10^{-4}$ & $6.34\cdot 10^{3}$ & $4.93\cdot 10^{3}$ & $8.86\cdot 10^{3}$ & $      1161$ & $      2085$ & $    925$\\
+$2.20\cdot 10^{-4}$ & $1.58\cdot 10^{-4}$ & $2.83\cdot 10^{-4}$ & $4.54\cdot 10^{3}$ & $3.53\cdot 10^{3}$ & $6.34\cdot 10^{3}$ & $      1623$ & $      2913$ & $   1291$\\
+$3.08\cdot 10^{-4}$ & $2.20\cdot 10^{-4}$ & $3.96\cdot 10^{-4}$ & $3.24\cdot 10^{3}$ & $2.53\cdot 10^{3}$ & $4.54\cdot 10^{3}$ & $      2268$ & $      4072$ & $   1805$\\
+$4.31\cdot 10^{-4}$ & $3.08\cdot 10^{-4}$ & $5.54\cdot 10^{-4}$ & $2.32\cdot 10^{3}$ & $1.81\cdot 10^{3}$ & $3.24\cdot 10^{3}$ & $      3170$ & $      5692$ & $   2523$\\
+$6.02\cdot 10^{-4}$ & $4.31\cdot 10^{-4}$ & $7.74\cdot 10^{-4}$ & $1.66\cdot 10^{3}$ & $1.29\cdot 10^{3}$ & $2.32\cdot 10^{3}$ & $      4431$ & $      7957$ & $   3527$\\
+$8.42\cdot 10^{-4}$ & $6.02\cdot 10^{-4}$ & $1.08\cdot 10^{-3}$ & $1.19\cdot 10^{3}$ & $9.25\cdot 10^{2}$ & $1.66\cdot 10^{3}$ & $      6194$ & $     11120$ & $   4927$\\
+$1.18\cdot 10^{-3}$ & $8.42\cdot 10^{-4}$ & $1.51\cdot 10^{-3}$ & $8.50\cdot 10^{2}$ & $6.61\cdot 10^{2}$ & $1.19\cdot 10^{3}$ & $      8657$ & $     15545$ & $   6889$\\
+$1.64\cdot 10^{-3}$ & $1.18\cdot 10^{-3}$ & $2.11\cdot 10^{-3}$ & $6.08\cdot 10^{2}$ & $4.73\cdot 10^{2}$ & $8.50\cdot 10^{2}$ & $     12101$ & $     21727$ & $   9627$\\
+$2.30\cdot 10^{-3}$ & $1.64\cdot 10^{-3}$ & $2.95\cdot 10^{-3}$ & $4.35\cdot 10^{2}$ & $3.39\cdot 10^{2}$ & $6.08\cdot 10^{2}$ & $     16914$ & $     30372$ & $  13459$\\
+$3.21\cdot 10^{-3}$ & $2.30\cdot 10^{-3}$ & $4.13\cdot 10^{-3}$ & $3.11\cdot 10^{2}$ & $2.42\cdot 10^{2}$ & $4.35\cdot 10^{2}$ & $     23643$ & $     42453$ & $  18811$\\
+$4.49\cdot 10^{-3}$ & $3.21\cdot 10^{-3}$ & $5.77\cdot 10^{-3}$ & $2.23\cdot 10^{2}$ & $1.73\cdot 10^{2}$ & $3.11\cdot 10^{2}$ & $     33048$ & $     59340$ & $  26293$\\
+$6.28\cdot 10^{-3}$ & $4.49\cdot 10^{-3}$ & $8.07\cdot 10^{-3}$ & $1.59\cdot 10^{2}$ & $1.24\cdot 10^{2}$ & $2.23\cdot 10^{2}$ & $     46194$ & $     82948$ & $  36755$\\
+$8.78\cdot 10^{-3}$ & $6.28\cdot 10^{-3}$ & $1.13\cdot 10^{-2}$ & $1.14\cdot 10^{2}$ & $8.87\cdot 10^{1}$ & $1.59\cdot 10^{2}$ & $     64571$ & $    115947$ & $  51377$\\
+$1.23\cdot 10^{-2}$ & $8.78\cdot 10^{-3}$ & $1.58\cdot 10^{-2}$ & $8.15\cdot 10^{1}$ & $6.34\cdot 10^{1}$ & $1.14\cdot 10^{2}$ & $     90259$ & $    162071$ & $  71813$\\
+$1.72\cdot 10^{-2}$ & $1.23\cdot 10^{-2}$ & $2.20\cdot 10^{-2}$ & $5.83\cdot 10^{1}$ & $4.54\cdot 10^{1}$ & $8.15\cdot 10^{1}$ & $    126165$ & $    226547$ & $ 100383$\\
+$2.40\cdot 10^{-2}$ & $1.72\cdot 10^{-2}$ & $3.08\cdot 10^{-2}$ & $4.17\cdot 10^{1}$ & $3.25\cdot 10^{1}$ & $5.83\cdot 10^{1}$ & $    176356$ & $    316670$ & $ 140315$\\
+$3.35\cdot 10^{-2}$ & $2.40\cdot 10^{-2}$ & $4.31\cdot 10^{-2}$ & $2.98\cdot 10^{1}$ & $2.32\cdot 10^{1}$ & $4.17\cdot 10^{1}$ & $    246513$ & $    442649$ & $ 196137$\\
+$4.68\cdot 10^{-2}$ & $3.35\cdot 10^{-2}$ & $6.02\cdot 10^{-2}$ & $2.13\cdot 10^{1}$ & $1.66\cdot 10^{1}$ & $2.98\cdot 10^{1}$ & $    344581$ & $    618745$ & $ 274165$\\
+$6.55\cdot 10^{-2}$ & $4.68\cdot 10^{-2}$ & $8.41\cdot 10^{-2}$ & $1.53\cdot 10^{1}$ & $1.19\cdot 10^{1}$ & $2.13\cdot 10^{1}$ & $    481663$ & $    864893$ & $ 383231$\\
+$9.15\cdot 10^{-2}$ & $6.55\cdot 10^{-2}$ & $1.18\cdot 10^{-1}$ & $1.09\cdot 10^{1}$ & $8.50\cdot 10^{0}$ & $1.53\cdot 10^{1}$ & $    673278$ & $   1208966$ & $ 535689$\\
+$1.28\cdot 10^{-1}$ & $9.15\cdot 10^{-2}$ & $1.64\cdot 10^{-1}$ & $7.82\cdot 10^{0}$ & $6.08\cdot 10^{0}$ & $1.09\cdot 10^{1}$ & $    941122$ & $   1689920$ & $ 748799$\\
+$1.79\cdot 10^{-1}$ & $1.28\cdot 10^{-1}$ & $2.30\cdot 10^{-1}$ & $5.59\cdot 10^{0}$ & $4.35\cdot 10^{0}$ & $7.82\cdot 10^{0}$ & $   1315521$ & $   2362205$ & $1046685$\\
+$2.50\cdot 10^{-1}$ & $1.79\cdot 10^{-1}$ & $3.21\cdot 10^{-1}$ & $4.00\cdot 10^{0}$ & $3.11\cdot 10^{0}$ & $5.59\cdot 10^{0}$ & $   1838863$ & $   3301939$ & $1463077$\\
+\hline \\
+\end{tabular}
+\label{table:evalfreqs119d}
 \end{table}
 
 \clearpage
