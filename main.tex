@@ -1,13 +1,19 @@
 \documentclass[draft,linenumbers]{agujournal2018}
-\usepackage{apacite}
-\usepackage{url} % should fix any errors with URLs in refs.
+\documentclass{article}
 \usepackage{amsmath}
-\usepackage{url}
+\usepackage{amssymb}
+
+\usepackage{subfigure}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[utf8]{inputenc}
+%\usepackage{apacite}
+%\usepackage{url} % should fix any errors with URLs in refs.
+%\usepackage{subfig}
 %\usepackage{xcolor}
 %\usepackage[colorlinks]{hyperref}
-\usepackage[colorinlistoftodos]{todonotes}
-\usepackage{subfig}
-\usepackage[demo]{graphicx}
+%\usepackage{subfloat}
+%\usepackage{subcaption}
+%\usepackage[demo]{graphicx}
 
 \draftfalse
 
@@ -22,7 +28,7 @@
 
 \begin{document}
 
-\title{The Magnetotelluric Impedance Middelpos, South Africa}
+\title{The Magnetotelluric Impedance at Middelpos, South Africa}
 
 \authors{R.S. Weigel\affil{1} and P.J. Cilliers\affil{2}}
 
@@ -38,17 +44,29 @@
 %\end{keypoints}
 
 \begin{abstract}
-From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South Africa site.
+From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South Africa site. Two methods were used to compute the surface impedance transfer function (TF): (1) 119 TFs were computed and averaged using non--overlapping one-day segments, and (2) One TF was computed using the full 119-day segment. The error bars were calculated using parametric formulas that assume a known distribution of errors and a bootstrap method. A frequency domain quality metric, the signal--to--prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground conductivity structure. The SE is greater than one only in the range of 1--minute to 6--hours for the $E_x$--related terms and 1--minute to 1--hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars.
 \end{abstract}
 
 \section{Introduction}
 
+The surface impedance of the Earth under a power line is an essential parameter in deriving the geomagnetically induced currents (GICs) in the power line from the measured or predicted geomagnetic field. The surface impedance is also the starting point for estimating the ground conductivity structure \cite{Simpson2005}. The surface impedance links the estimated electric field to the geomagnetic field. The surface impedance is typically derived from magnetotelluric (MT) measurements which combine co-located 3-axis magnetic field measurements with 2-axis horizontal electric field measurements (\cite{Naido2012}, \cite{Simpson2005}). The electric field (E-field) and magnetic field (B-field) are not independent of each other but are linked by a transfer function derived from Maxwell’s equations (\cite{Vozoff1991}; \cite{Simpson2005}).
+
+MT have been done in South Africa by various institutions. The SAMTEX campaign comprising short-term (3 weeks per location) measurement along various transects of South Africa was conducted by a consortium of geophysicists in yyyy to characterize the Kaap Vaal Craton in the central part of South Africa (Ref 2 SAMTEX). The South African National Space Agency (SANSA) deployed long-term MT measurement (several months at each location) stations at 7 locations to provide useful data for GIC estimation by the Space Weather Centre at SANSA  (Ref 3 – report).
+
+There are various algorithms used for the derivation of the tensor components of the surface impedance. The original work of \cite{Cagniard1953} on MT data analysis assumed orthogonality of the B-- and E--field vectors, which results in a surface impedance matrix with zero off-diagonal components. \cite{Sims1971} introduced regression--based algorithms for computing all components of the impedance tensor. The LEMI software provided with the LEMI magnetometers produced by the LLC in Lviv, Ukraine (Ref), the Egbert algorithm (\cite{Egbert1997}, \cite{Egbert2011}), the Jones algorithm (\cite{Jones1989}; \cite{Chave2012}) and various others \cite{Larsen1996}. In some cases, these algorithms give different surface impedance values from the same MT data. ??-examples. 
+
+\cite{Eggers1982} introduced the eigenstate analysis of
+the impedance tensor to allow non-orthogonality between the magnetic and electric field vectors. \cite{Bahr1988} introduced the telluric vector technique to deal with local telluric distortion.
+
+Recent papers in which transfer functions were derived from MT measurements include \cite{Fujii2015}, \cite{Jones1989}, \cite{Heyns2020}, \cite{Weigel2019}, \cite{Chen2021}, 
+\cite{Moorkamp2007}.
+
 \section{Data}
 \label{section:Data}
 
-Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight such MT instruments in Southern Africa managed by the South African Space Agency (SANSA).
+Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight MT instruments in southern Africa managed by the South African Space Agency (SANSA).
 
-The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North; the magnetic declination at Middelpos on 2012-07-12 was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} is an annotated Google Earth image of the instrument location and electric field probes. The timestamp of the measurements is derived from a GPS chip that is part of the LEMI-417 instrument. Data were manually retrieved by a site visit by SANSA technicians. 
+The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North on 2012-07-12 when the magnetic declination at Middelpos was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} is an annotated Google Earth image of the instrument location and electric field probes. The timestamp of the measurements is derived from a GPS chip that is part of the LEMI-417 instrument. Data were manually retrieved by a site visit by SANSA technicians. 
 
 \begin{figure}[h]
   \centering
@@ -58,15 +76,21 @@ The $+x$-axes of both the magnetometer and electric field probe are aligned with
  \label{fig:site}
 \end{figure}
 
-The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $X$\todo{insert value} ($X$\%)\todo{insert value}; for $E_y(t)$, the number was $X$ ($X$\%).
+The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $X$ \todo{insert value} ($X$\%) \todo{insert value}; for $E_y(t)$, the number was $X$ ($X$\%).
 
-The amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The amplitudes shown are frequency--domain band averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs1d} of Appendix±~B. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, was computed using $(1/|\widetilde{A}|)\sqrt{[A_r\Delta A_r]^2 + [A_i\Delta A_i]^2}$, where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency--domain averages shown in Figure~\ref{fig:dft}. The 95\% confidence interval lengths for the averages $A_r$ and $A_i$ were determined using $\pm t^{-1}_{n-1}(0.025) (s/\sqrt{n})$, where $n$ is the number of values used to compute the average, $t^{-1}_{n-1}$ is the inverse t-distribution, and $s$ is the sample standard deviation.
+The averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The averaged amplitudes shown are frequency--domain averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, computed computed using propagation of errors on $|\widetilde{A}| = \sqrt{A_r^2 + A_i^2}$, is
+
+\begin{equation}
+\Delta\big|\widetilde{A}\big| = \sqrt{(A_r\Delta A_r)^2 + (A_i\Delta A_i)^2} / \big|\widetilde{A}\big|
+\end{equation}
+
+\noindent
+where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency--domain averages shown in Figure~\ref{fig:timeseries}(b). The lengths of the 95\% symmetric confidence intervals for the averages $A_r$ and $A_i$ were determined using $\pm 2 (s/\sqrt{n})t^{-1}_{n-1}(0.025)$, where $n$ is the number of values used to calculate the average, $t^{-1}_{n-1}(0.025)$ is the inverse $t$-distribution evaluated at $0.025$ and $s$ is the standard deviation of the sample.
 
 \begin{figure}
-     \centering
-     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
-    \hfill
-     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
+     \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
+     \hspace{10pt}
+     \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
      \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
   \label{fig:timeseries}
 \end{figure}
@@ -74,7 +98,7 @@ The amplitudes of the Fourier coefficients for each vector component of the time
 \section{Models and Methods}
 \label{section:Models_and_Methods}
 
-$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the transfer function $\boldsymbol{\mathcal{\widetilde{Z}}}$ in
+$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to estimate the complex--valued transfer function matrix $\boldsymbol{\mathcal{\widetilde{Z}}}$ in
 
 \begin{linenomath*}
     \begin{equation}
@@ -84,7 +108,7 @@ $\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the trans
 \end{linenomath*}
 
 \noindent where $f_e$ is an ``evaluation frequency" and
-    
+
 \begin{linenomath*}
     \begin{equation}
         \boldsymbol{\mathcal{\widetilde{Z}}}(f_e) = 
@@ -98,58 +122,58 @@ $\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to solve for the trans
 \noindent using a method described by \citeay{Sims1971}: for each $\mathbf{\widetilde{E}}$ vector component $k=x,y$, a four parameter over--determined linear regression is performed using
 
 \begin{equation}
-\widetilde{E}_k(f) = \widetilde{Z}_{kx}(f)B_x(f) + \widetilde{Z}_{ky}(f)B_y(f)
+\widetilde{E}_k(f) = \widetilde{Z}_{kx}(f)\widetilde{B}_x(f) + \widetilde{Z}_{ky}(f)\widetilde{B}_y(f)
 \label{eqn:single}
 \end{equation}
 
-\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because the two regression parameters $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ in Equation~\ref{eqn:single} are complex--valued \citep{Egbert1986}).
+\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because the two regression parameters $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ in Equation~\ref{eqn:single} are complex--valued; the actual regression is performed using only real numbers -- see \cite{Egbert1986}).
 
-Two methods have been used for computing the Fourier coefficients -- one uses the standard DFT (Discrete Fourier Transform) formula, typically implemented using the FFT algorithm, and the other is an approximation based on the method of ``Cascade Decimation" \citep{Wight1980}, which requires less memory. Here, we use the standard DFT formula.
+Two methods have been used for computing the Fourier coefficients -- one uses the standard DFT (Discrete Fourier Transform) formula for equally spaced records, typically implemented using the FFT algorithm. The other is an approximation based on the method of ``Cascade Decimation" \citep{Wight1980}, which can require less memory and produce logarithmically spaced evaluation frequencies. Here, we use the standard DFT formula because it is not an approximation.
 
-There are two general methods for computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform a regression using Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression on each segment in a band centered on the evaluation frequency, and then average the segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ are unweighted averages. 
+There are two general methods for computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform regression using the Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression on each segment using the Fourier coefficients in a band centered on the evaluation frequency to find segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$, and then average the segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ are unweighted averages. 
 
-There are two common modifications of the regression solution method. The first is the ``remote reference"  method, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such data. The second modification is the use of a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically downweights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
+There are two common modifications to these estimation methods. The first is the ``remote reference"  method, which involves using $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such data. The second uses a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically downweights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
 
 \section{Results}
 \label{section:Results}
 
-Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $119$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the $119$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using
+Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $119$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the average of $119$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using propagation of errors on
 
-$$\Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2) \sqrt{ \big[\text{Im}(\widetilde{Z}_{ij})\text{Re}(\Delta \widetilde{Z}_{ij})\big]^2 + \big[\text{Re}(\widetilde{Z}_{ij})\text{Im}(\Delta \widetilde{Z}_{ij}) \big]^2}\;$$
+$$\phi_{ij}=\tan^{-1}[\text{Im}(\widetilde{Z}_{ij})/\text{Re}(\widetilde{Z}_{ij})]$$
+
+\noindent giving
+
+$$\Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2) \sqrt{ \big[\text{Im}(\widetilde{Z}_{ij})\text{Re}(\Delta \widetilde{Z}_{ij})\big]^2 + \big[\text{Re}(\widetilde{Z}_{ij})\text{Im}(\Delta \widetilde{Z}_{ij}) \big]^2}.$$
 
 \noindent where $\Delta \widetilde{Z}_{ij}$ is the 95\% confidence interval length for element $\widetilde{Z}_{ij}$ of $\boldsymbol{\mathcal{\widetilde{Z}}}$, $|\boldsymbol{\cdotp}|$ is the complex magnitude, and $\text{Re}(\boldsymbol{\cdotp})$ and $\text{Im}(\boldsymbol{\cdotp})$ are the real and imaginary parts of the argument, respectively.
 
-The signal--to--error ratio, $\text{SE}_k(f_e)$ for component $k=x,y$ was calculated using 
+
+
+
+The signal--to--error ratio, $\text{SE}_k(f_e)$, for component $k=x,y$ of $\mathbf{E}$ was calculated using 
 
 \begin{equation}
 \text{SE}_k(f_e) = \frac{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{E}_k(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e}\left|\Delta\widetilde{E}_k(f_j)\right|^2}
 \end{equation}
 
-\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} list the band centers, ranges, and number of frequencies, $N_e$ in each band. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the DFT of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 119$ points. At grid frequencies outside of the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$ in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 119$ points. At grid frequencies outside of the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
 
-The coherence, $\text{Coh}_{XY}(f_e)$, was computed using
+The coherence, $\text{Coh}_{XY}(f_e)$, was computed using the 
 
 \begin{equation}
 \text{Coh}^2_{XY}(f_e) = \frac{\left|\displaystyle\sum_{j=1}^{N_e}\widetilde{X}^*(f_j)\widetilde{Y}(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{X}(f_j)\right|^2\sum_{j=1}^{N_e} \left|\widetilde{Y}(f_j)\right|^2}
 \end{equation}
 
-\noindent where the summation frequencies and $f_e$ values are the same as those used for computing the $\text{SE}$. 95\% error bars were computed using the same as $\text{SE}$. The coherence was computed between the predicted field, $E^\text{p}_k$, and the measured field, $E_k$, and also between $E_x^\text{p}$ and $B_y$ and between $E_y^\text{p}$ and $B_x$.
+\noindent where the summation frequencies and $f_e$ values are the same as those used for computing the $\text{SE}$. 95\% error bars were computed using the same as $\text{SE}$. The coherence was computed between the predicted field, $E^\text{p}_k(t)$, and the measured field, $E_k(t)$, and also between $E_x^\text{p}(t)$ and $B_y(t)$ and between $E_y^\text{p}(t)$ and $B_x(t)$.
 
+Traditionally, the primary quality metric used for evaluating the transfer function is the $\text{Coh}^2_{E_xB_y}$ and $\text{Coh}^2_{E_yB_x}$. Here, we have also computed the coherences between the measured and predicted fields, $\text{Coh}^2_{E_kE^\text{p}_k}$ ($k=x,y$) as it is a more direct measure of the ability of the transfer function to reproduce the signal. Coherence has a limitation, however. Two signals that are identical except for a scaling factor will have the same coherence for any scaling factor. As a result, we have introduced the signal--to--error, which can be used to make a more direct assessment of how well the transfer function captures the measured signal.
 
+Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{Coh}^2)$, which applies only if the input signal and the noise in the output signal (which is unknown) are uncorrelated and the input signal has no noise (\cite{Miranda2006}; \cite{Pedersen1988}).
 
 %sxx = abs(sum(dftsegsx{s}.*conj(dftsegsx{s}),1));
 %syy = abs(sum(dftsegsy{s}.*conj(dftsegsy{s}),1));
 %sxy = abs(sum(conj(dftsegsx{s}).*dftsegsy{s},1));
 %cxy(s,:) = sqrt(sxy/sqrt(sxx*syy));
-
-\begin{figure}
-     \centering
-     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
-    \hfill
-     \subfloat[\centering]{\includegraphics[width=0.48\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
-     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
-  \label{fig:timeseries}
-\end{figure}
 
 
 \begin{figure}[h!]
@@ -157,10 +181,10 @@ The coherence, $\text{Coh}_{XY}(f_e)$, was computed using
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf}} 
   \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf}} 
-  \subfigure(d){\includegraphics[width=0.48\textwidth]{zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf}} 
+  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf}} 
 
   \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{\widetilde{Z}}}$: (a) $|\widetilde{Z}_{xx}|$ and $\phi_{xx}$; (b) $|\widetilde{Z}_{xy}|$ and $\phi_{xy}$; (c) $|\widetilde{Z}_{yx}|$ and $\phi_{yx}$; and (d) $|\widetilde{Z}_{yy}|$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero. The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity.}
-    \label{fig:z}
+  \label{fig:z}
 
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf}} 
@@ -189,7 +213,10 @@ The coherence, $\text{Coh}_{XY}(f_e)$, was computed using
   \label{fig:lemi}
 \end{figure}
 
+
+\clearpage
 \section{Appendix B}
+\label{appendix:tables}
 
 \begin{table}
   \caption{Evaluation frequencies, $f_e$, and periods, $T_e$, associated with evaluation frequency bands used for regression and spectra averaging using one--day segments. Subscript $l$ indicates a lower band bound and subscript $u$ an upper band bound. $i_l$ and $i_h$ are the lower and upper DFT frequency numbers, and $N_e$ is the number of DFT points in the band. $T=1/f$ and $i=1/86400$ for all subscripts.}
