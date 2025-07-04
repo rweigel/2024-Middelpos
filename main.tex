@@ -58,13 +58,12 @@ There are various algorithms used for the derivation of the tensor components of
 \cite{Eggers1982} introduced the eigenstate analysis of
 the impedance tensor to allow non-orthogonality between the magnetic and electric field vectors. \cite{Bahr1988} introduced the telluric vector technique to deal with local telluric distortion.
 
-Recent papers in which transfer functions were derived from MT measurements include \cite{Fujii2015}, \cite{Jones1989}, \cite{Heyns2020}, \cite{Weigel2019}, \cite{Chen2021}, 
-\cite{Moorkamp2007}.
+Recent papers in which transfer functions were derived from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015},  \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
 
 \section{Data}
 \label{section:Data}
 
-Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight MT instruments in southern Africa managed by the South African Space Agency (SANSA).
+Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight MT instruments in southern Africa managed by the South African National Space Agency (SANSA).
 
 The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North on 2012-07-12 when the magnetic declination at Middelpos was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} is an annotated Google Earth image of the instrument location and electric field probes. The timestamp of the measurements is derived from a GPS chip that is part of the LEMI-417 instrument. Data were manually retrieved by a site visit by SANSA technicians. 
 
@@ -78,14 +77,14 @@ The $+x$-axes of both the magnetometer and electric field probe are aligned with
 
 The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $X$ \todo{insert value} ($X$\%) \todo{insert value}; for $E_y(t)$, the number was $X$ ($X$\%).
 
-The averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The averaged amplitudes shown are frequency--domain averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, computed computed using propagation of errors on $|\widetilde{A}| = \sqrt{A_r^2 + A_i^2}$, is
+The averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The averaged amplitudes shown are frequency--domain averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, calculated using propagation of errors in $|\widetilde{A}| = \sqrt{A_r^2 + A_i^2}$, is
 
 \begin{equation}
 \Delta\big|\widetilde{A}\big| = \sqrt{(A_r\Delta A_r)^2 + (A_i\Delta A_i)^2} / \big|\widetilde{A}\big|
 \end{equation}
 
 \noindent
-where $\Delta A_r$ and $\Delta A_i$ are the 95\% confidence interval lengths for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency--domain averages shown in Figure~\ref{fig:timeseries}(b). The lengths of the 95\% symmetric confidence intervals for the averages $A_r$ and $A_i$ were determined using $\pm 2 (s/\sqrt{n})t^{-1}_{n-1}(0.025)$, where $n$ is the number of values used to calculate the average, $t^{-1}_{n-1}(0.025)$ is the inverse $t$-distribution evaluated at $0.025$ and $s$ is the standard deviation of the sample.
+where $\Delta A_r$ and $\Delta A_i$ are the lengths of the 95\% confidence intervals for the real ($A_r$) and imaginary ($A_i$) parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of the $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency domain averages shown in Figure~\ref{fig:timeseries}(b). The lengths of the 95\% symmetric confidence intervals for the averages $A_r$ and $A_i$ were determined using $\pm 2 (s/\sqrt{n})t^{-1}_{n-1}(0.025)$, where $n$ is the number of values used to calculate the average, $t^{-1}_{n-1}(0.025)$ is the inverse $t$-distribution evaluated at $0.025$ and $s$ is the standard deviation of the sample.
 
 \begin{figure}
      \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}}
@@ -197,15 +196,24 @@ Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{
 
 \clearpage
 
-\section{Comparsion to KAP103}
+\section{Comparision to KAP103}
 
-\begin{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/map.pdf}
+\caption{Location of Middelpos [$-31.906^\circ$, $20.234^\circ$] and KAP103 [$-32.139^\circ$, $20.468^\circ$] MT stations. The relief map is from the ETOPO1 Global Relief Model (\cite{NCEI2006}), and the Cape Fold Belt line was derived from the digitization of Figure~1 of \cite{Nguuri2001}}.
+\label{fig:map}
+\end{figure}
+
+\begin{figure}[h]
      \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/tsplot-original-KAP103-tf1.pdf}}
      \hspace{10pt}
      \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf}}
      \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
   \label{fig:timeseries}
 \end{figure}
+
+\clearpage
 
 \section{Discussion}
 
