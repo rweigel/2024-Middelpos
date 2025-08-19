@@ -44,26 +44,26 @@
 %\end{keypoints}
 
 \begin{abstract}
-From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South Africa site. Two methods were used to compute the surface impedance transfer function (TF): (1) 119 TFs were computed and averaged using non--overlapping one-day segments, and (2) One TF was computed using the full 119-day segment. The error bars were calculated using parametric formulas that assume a known distribution of errors and a bootstrap method. A frequency domain quality metric, the signal--to--prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground conductivity structure. The SE is greater than one only in the range of 1--minute to 6--hours for the $E_x$--related terms and 1--minute to 1--hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars.
+From 2012-07-12 through 2012-11-07 (119 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South African site. Two methods were used to compute the surface impedance transfer function (TF): (1) 119 TFs were computed and averaged using non--overlapping one-day segments, and (2) One TF was computed using the full 116-day segment. The error bars were calculated using parametric formulas that assume a known distribution of errors and a bootstrap method. A frequency domain quality metric, the signal--to--prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground conductivity structure. The SE is greater than one only in the range of 1--minute to 6--hours for the $E_x$--related terms and 1--minute to 1--hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars.
 \end{abstract}
 
 \section{Introduction}
 
-The surface impedance of the Earth under a power line is an essential parameter in deriving the geomagnetically induced currents (GICs) in the power line from the measured or predicted geomagnetic field. The surface impedance is also the starting point for estimating the ground conductivity structure \cite{Simpson2005}. The surface impedance links the estimated electric field to the geomagnetic field. The surface impedance is typically derived from magnetotelluric (MT) measurements which combine co-located 3-axis magnetic field measurements with 2-axis horizontal electric field measurements (\cite{Naido2012}, \cite{Simpson2005}). The electric field (E-field) and magnetic field (B-field) are not independent of each other but are linked by a transfer function derived from Maxwell’s equations (\cite{Vozoff1991}; \cite{Simpson2005}).
+The surface impedance of the Earth under a power line is an essential parameter in deriving the geomagnetically induced currents (GICs) in the power line from the measured or predicted geomagnetic field. The surface impedance is also the starting point for estimating the ground conductivity structure \cite{Simpson2005}. The surface impedance links the estimated electric field to the geomagnetic field. The surface impedance is typically derived from magnetotelluric (MT) measurements, which combine co-located 3-axis magnetic field measurements with 2-axis horizontal electric field measurements (\cite{Naido2012}, \cite{Simpson2005}). The electric field (E-field) and magnetic field (B-field) are not independent of each other but are linked by a transfer function derived from Maxwell’s equations (\cite{Vozoff1991}; \cite{Simpson2005}).
 
-MT have been done in South Africa by various institutions. The SAMTEX campaign comprising short-term (3 weeks per location) measurement along various transects of South Africa was conducted by a consortium of geophysicists in yyyy to characterize the Kaap Vaal Craton in the central part of South Africa (Ref 2 SAMTEX). The South African National Space Agency (SANSA) deployed long-term MT measurement (several months at each location) stations at 7 locations to provide useful data for GIC estimation by the Space Weather Centre at SANSA  (Ref 3 – report).
+MT measurements have been made in South Africa by various institutions. The SAMTEX campaign, comprising short-term ($\sim$3 weeks per location) measurements along various transects in South Africa, was conducted by a consortium of geophysicists to characterize the Kaap Vaal Craton in the central part of South Africa \cite{Jones2009}. The South African National Space Agency (SANSA) deployed long-term MT measurement stations (operating for several months at each location) at seven locations to provide useful data for GIC estimation by the Space Weather Centre at SANSA (Ref. 3 – report).
 
-There are various algorithms used for the derivation of the tensor components of the surface impedance. The original work of \cite{Cagniard1953} on MT data analysis assumed orthogonality of the B-- and E--field vectors, which results in a surface impedance matrix with zero off-diagonal components. \cite{Sims1971} introduced regression--based algorithms for computing all components of the impedance tensor. The LEMI software provided with the LEMI magnetometers produced by the LLC in Lviv, Ukraine (Ref), the Egbert algorithm (\cite{Egbert1997}, \cite{Egbert2011}), the Jones algorithm (\cite{Jones1989}; \cite{Chave2012}) and various others \cite{Larsen1996}. In some cases, these algorithms give different surface impedance values from the same MT data. ??-examples. 
+Several algorithms have been used for deriving the tensor components of the surface impedance. The original work of \cite{Cagniard1953} on MT data analysis assumed orthogonality of the B-- and E--field vectors, which results in a surface impedance matrix with zero off-diagonal components. \cite{Sims1971} introduced regression--based algorithms for computing all components of the impedance tensor. The LEMI software provided with the LEMI magnetometers produced by the LLC in Lviv, Ukraine (Ref), the Egbert algorithm (\cite{Egbert1997}, \cite{Egbert2011}), the Jones algorithm (\cite{Jones1989}; \cite{Chave2012}), and various others \cite{Larsen1996}.
 
 \cite{Eggers1982} introduced the eigenstate analysis of
 the impedance tensor to allow non-orthogonality between the magnetic and electric field vectors. \cite{Bahr1988} introduced the telluric vector technique to deal with local telluric distortion.
 
-Recent papers in which transfer functions were derived from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015},  \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
+Recent papers in which transfer functions were derived from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015}, \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
 
 \section{Data}
 \label{section:Data}
 
-Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.90605713^\circ$ and longitude $20.23408023^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight MT instruments in southern Africa managed by the South African National Space Agency (SANSA).
+Data were obtained from the LEMI-417 instrument, which is designed for long--term recording of MT data; it is comprised of a 3--axis fluxgate magnetometer and a 2--axis electric field antenna. The instrument was installed in an empty field near the small town (population $\sim$300) Middelpos, South Africa, located at geographic latitude $-31.906^\circ$ and longitude $20.234^\circ$ at an altitude of 1165~m. The instrument is powered by batteries that are charged with a solar panel. The instrument at Middelpos is one of eight MT instruments in southern Africa managed by the South African National Space Agency (SANSA).
 
 The $+x$-axes of both the magnetometer and electric field probe are aligned with geomagnetic North on 2012-07-12 when the magnetic declination at Middelpos was $-23.2541323^\circ$ (computed using the IGRF model [\cite{igrf}]). Figure~\ref{fig:site} is an annotated Google Earth image of the instrument location and electric field probes. The timestamp of the measurements is derived from a GPS chip that is part of the LEMI-417 instrument. Data were manually retrieved by a site visit by SANSA technicians. 
 
@@ -136,7 +136,7 @@ There are two common modifications to these estimation methods. The first is the
 \section{Results}
 \label{section:Results}
 
-Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $119$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the average of $119$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using propagation of errors on
+Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $116$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the average of $116$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using propagation of errors on
 
 $$\phi_{ij}=\tan^{-1}[\text{Im}(\widetilde{Z}_{ij})/\text{Re}(\widetilde{Z}_{ij})]$$
 
@@ -146,16 +146,20 @@ $$\Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2) \sqrt{ \big[\text{Im}(\widetilde{
 
 \noindent where $\Delta \widetilde{Z}_{ij}$ is the 95\% confidence interval length for element $\widetilde{Z}_{ij}$ of $\boldsymbol{\mathcal{\widetilde{Z}}}$, $|\boldsymbol{\cdotp}|$ is the complex magnitude, and $\text{Re}(\boldsymbol{\cdotp})$ and $\text{Im}(\boldsymbol{\cdotp})$ are the real and imaginary parts of the argument, respectively.
 
+A key result is that there are significant differences in the transfer functions computed using the two approaches. We have verified that the two approaches should give transfer functions without statistically significant differences by generating a simulated $\mathbf{E}(t)$ by convolving a white noise $\mathbf{B}(t)$ with idealized transfer functions (the two approaches will not give identical transfer functions due to the differences in frequency grids, but the average transfer functions from the two approaches will converge). As a result, we conclude that the observed differences are likely due to non-stationarity.
+
+In the literature, many results are presented using only one algorithm and a single set of parameters for that algorithm. However, it seems that, given these two reasonable approaches for computing a transfer function can yield different results, there is an ``algorithmic uncertainty" that should be accounted for by computing the transfer function using different algorithms and varying parameters for a given algorithm. There is also an uncertainty due to the data selection; \cite{Chen2022} noted that for some SAMTEX sites, the transfer functions were dependent on the time intervals used in their computation, in particular on whether the interval contained a period of high geomagnetic activity. This is expected because the plane wave approximation is invalid when geomagnetic activity is strong. Conversely, in the limit of low geomagnetic activity, the signal-to-noise ratio is low, leading to large error bars in the computed transfer functions. 
 
 The signal--to--error ratio, $\text{SE}_k(f_e)$, for component $k=x,y$ of $\mathbf{E}$ was calculated using 
 
 \begin{equation}
 \text{SE}_k(f_e) = \frac{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{E}_k(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e}\left|\Delta\widetilde{E}_k(f_j)\right|^2}
+\label{eqn:se}
 \end{equation}
 
-\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$ in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 119$ points. At grid frequencies outside of the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$ in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 116$ points. At grid frequencies outside of the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
 
-The coherence, $\text{Coh}_{XY}(f_e)$, was computed using the 
+The squared coherence, $\text{Coh}^2_{XY}(f_e)$, was computed using the 
 
 \begin{equation}
 \text{Coh}^2_{XY}(f_e) = \frac{\left|\displaystyle\sum_{j=1}^{N_e}\widetilde{X}^*(f_j)\widetilde{Y}(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{X}(f_j)\right|^2\sum_{j=1}^{N_e} \left|\widetilde{Y}(f_j)\right|^2}
@@ -165,8 +169,9 @@ The coherence, $\text{Coh}_{XY}(f_e)$, was computed using the
 
 Traditionally, the primary quality metric used for evaluating the transfer function is the $\text{Coh}^2_{E_xB_y}$ and $\text{Coh}^2_{E_yB_x}$. Here, we have also computed the coherences between the measured and predicted fields, $\text{Coh}^2_{E_kE^\text{p}_k}$ ($k=x,y$) as it is a more direct measure of the ability of the transfer function to reproduce the signal. Coherence has a limitation, however. Two signals that are identical except for a scaling factor will have the same coherence for any scaling factor. As a result, we have introduced the signal--to--error, which can be used to make a more direct assessment of how well the transfer function captures the measured signal.
 
-Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{Coh}^2)$, which applies only if the input signal and the noise in the output signal (which is unknown) are uncorrelated and the input signal has no noise (\cite{Miranda2006}; \cite{Pedersen1988}).
+Note that $\text{SE}$ defined by Equation~\ref{eqn:se} differs in general from the signal--to--noise ratio, $\text{Coh}^2/(1-\text{Coh}^2)$ that applies only if the input signal and the noise in the output signal (which is unknown) are uncorrelated and the input signal has no noise (\cite{Miranda2006}; \cite{Pedersen1988}).
 
+The signal-to-error and squared coherence associated with the transfer functions shown in Figure~\ref{fig:z} are shown in Figure~\ref{fig:se}. In the top panel of Figure~\ref{fig:se}(a), we see that the transfer function for $E_x$ only captures the variations in the data at periods longer than approximately 40 seconds and that the model computed using one 116-day segment has a slightly higher $\text{SE}$ ratio. For $E_y$, the top panel of Figure~\ref{fig:se}(b) shows that the period range over which the transfer function produces useful predictions is from approximately 6 minutes to 6 hours.
 %sxx = abs(sum(dftsegsx{s}.*conj(dftsegsx{s}),1));
 %syy = abs(sum(dftsegsy{s}.*conj(dftsegsy{s}),1));
 %sxy = abs(sum(conj(dftsegsx{s}).*dftsegsy{s},1));
@@ -180,28 +185,41 @@ Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{
   \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf}} 
   \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf}} 
 
-  \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{\widetilde{Z}}}$: (a) $|\widetilde{Z}_{xx}|$ and $\phi_{xx}$; (b) $|\widetilde{Z}_{xy}|$ and $\phi_{xy}$; (c) $|\widetilde{Z}_{yx}|$ and $\phi_{yx}$; and (d) $|\widetilde{Z}_{yy}|$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero. The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity.}
+  \caption{Magnitudes and phases for components of $\boldsymbol{\mathcal{\widetilde{Z}}}$: (a) $|\widetilde{Z}_{xx}|$ and $\phi_{xx}$; (b) $|\widetilde{Z}_{xy}|$ and $\phi_{xy}$; (c) $|\widetilde{Z}_{yx}|$ and $\phi_{yx}$; and (d) $|\widetilde{Z}_{yy}|$ and $\phi_{yy}$. Open circles on the lower part of the impedance amplitude error bars indicate that this formula yielded a value below zero.}
   \label{fig:z}
+\end{figure}
+%The gray background in plots shown in Figure~\ref{fig:z} corresponds to periods for which the signal-to-prediction error, shown in Figure~\ref{fig:se}, is greater than unity.
 
+\begin{figure}[h!]
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf}} 
 
   \caption{Model metrics for (a) $E_x$, which depends on $\widetilde{Z}_{xx}$ and $\widetilde{Z}_{xy}$ shown in Figure~\ref{fig:z}(a)-(b) and (b) $E_y$, which depends on $\widetilde{Z}_{yx}$ and $\widetilde{Z}_{yy}$ shown in  Figure~\ref{fig:z}(b)-(c).}
   \label{fig:se}
-
 \end{figure}
-
-%\begin{figure}[h!] 
-%\end{figure}
 
 \clearpage
 
 \section{Comparison to KAP103}
 
+\cite{Jones2009} presented a summary of an MT survey of sites in South Africa; the results of the transfer function calculations are available from ~\cite{Jones2004}. The transfer functions were computed using the Bounded Influence Remote Reference algorithm \cite{Chave2004}. The site nearest Middelpos is KAP103, which is shown in Figure~\ref{fig:map}.
+
+In Figure~\ref{fig:timeseries-KAP103}, the 26--day magnetic and electric time series are shown along with the magnitude of their Fourier coefficients. The measurement interval included the large geomagnetic storm of November 20--22, 2003, that followed the October 31st ``Halloween" storm.
+
+In Figure~\ref{fig:z-compare-KAP103}, we compare the pre--computed KAP103 transfer function (~\cite{Jones2004}) with that computed at Middelpos (corresponding to the ``1 116--day segment" lines shown in Figure~\ref{fig:z}). In addition, we have used the time series shown in Figure~\ref{fig:timeseries-KAP103} and the single transfer methodology described in the previous section.
+
+There are several significant differences in the transfer functions shown in Figure~\ref{fig:z-compare-KAP103}. First, in common with Figure~\ref{fig:z}, the method used to compute the transfer function can lead to statistically significant differences in the transfer functions (with respect to the computed error bars). In the case of the comparison of the BIRRP transfer functions with the single transfer function method used in the previous section, significant differences are found in all components of $\boldsymbol{\mathcal{\widetilde{Z}}}$, and these differences tend to occur at short and long periods.
+
+Much larger differences exist between the amplitudes of the transfer functions computed at Middelpos and at KAP103, where the magnitudes of the Middelpos transfer function components range from 2 to 10 times smaller than those at KAP103. 
+
+However, the transfer function phases are generally consistent, with the exception of $\widetilde{Z}_{yy}$.
+
+To determine if the large geomagnetic storm may explain some of the differences, we have computed transfer functions using only data prior to November 20th and find consistent results, similar to \cite{Chen2022}, who found that for several of SAMTEX sites the computed transfer functions were not strongly dependent on whether the storm was or was not included.
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{figures/map.pdf}
-\caption{Location of Middelpos [$-31.906^\circ$, $20.234^\circ$] and KAP103 [$-32.139^\circ$, $20.468^\circ$] MT stations. The relief map is from the ETOPO1 Global Relief Model (\cite{NCEI2006}), and the Cape Fold Belt line was derived from the digitization of Figure~1 of \cite{Nguuri2001}}.
+\caption{Locations of Middelpos (Geographic [latitude, longitude] = [$-31.906^\circ$, $20.234^\circ$]) and KAP103 ([$-32.139^\circ$, $20.468^\circ$]) MT stations The relief map is from the ETOPO1 Global Relief Model (\cite{NCEI2006}), and the Cape Fold Belt line was derived from the digitization of Figure~1 of \cite{Nguuri2001}}.
 \label{fig:map}
 \end{figure}
 
@@ -213,13 +231,31 @@ Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{
      \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/tsplot-original-KAP103-tf1.pdf}}
      \hspace{10pt}
      \subfigure[]{\includegraphics[width=0.45\textwidth]{figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf}}
-     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
-  \label{fig:timeseries}
+     \caption{(a) Measurements used for analysis. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
+  \label{fig:timeseries-KAP103}
 \end{figure}
 
 \clearpage
 
-\section{Discussion}
+
+\begin{figure}[h!]
+  \vspace{-2em}
+  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.pdf}} 
+  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.pdf}} 
+  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx.pdf}} 
+  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy.pdf}} 
+
+  \caption{Comparison of transfer function computed at Middelpos with two transfer functions computed at the KAP103 site. Error bars have the format as in Figure~\ref{fig:z}.}
+  \label{fig:z-compare-KAP103}
+\end{figure}
+
+\section{Summary}
+
+Transfer functions (surface impedances) were computed using data measured at Middelpos, South Africa, using magnetotelluric measurements spanning 116 days. We find that the computed transfer function depended on one aspect of how the regression was performed. In one case, the full time range of data was split into 116 1-day segments, and the resulting 116 transfer functions were averaged in the frequency domain. In the other case, no splitting was performed, and a single transfer function was computed. At many frequencies, and for all components of the transfer function, differences were found that were inconsistent with the computed error bars. 
+
+We also compared the transfer function at Middelpos with the nearest MT site from the SAMTEX campaign. The transfer function magnitudes differed significantly at all frequencies. 
+
+\clearpage
 
 \section{Appendix A}
 
@@ -229,17 +265,18 @@ Note that this differs from the exact signal--to--noise, $\text{Coh}^2/(1-\text{
   \includegraphics[width=0.45\textwidth]{figures/instrument.pdf}
   (b)
   \includegraphics[width=0.45\textwidth]{figures/solarpanel.pdf}
-  \caption{The Middelpos MT instrument. (a) The LEMI-417 instrument and the 12V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument is mounted on two 25-liter water bottles to reduce temperature variation. (b) The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.}
+  \caption{The Middelpos MT instrument. (a) The LEMI-417 instrument and the 12~V lead-acid batteries that power it are in a subterranean enclosure with concrete walls. The instrument is mounted on two 25--liter water bottles to reduce temperature variation. (b) The solar panels are mounted on a steel frame over the enclosure. The side openings are covered with a canvas to prevent direct sunlight on the instrument. The small white dome above the solar panels is the GPS antenna.}
   \label{fig:lemi}
 \end{figure}
 
 
 \clearpage
+
 \section{Appendix B}
 \label{appendix:tables}
 
-\begin{table}
-  \caption{Evaluation frequencies, $f_e$, and periods, $T_e$, associated with evaluation frequency bands used for regression and spectra averaging using one--day segments. Subscript $l$ indicates a lower band bound and subscript $u$ an upper band bound. $i_l$ and $i_h$ are the lower and upper DFT frequency numbers, and $N_e$ is the number of DFT points in the band. $T=1/f$ and $i=1/86400$ for all subscripts.}
+\begin{table}[hbt]
+  \caption{}
   \centering
   \small
 \begin{tabular}{c c c c c c c c c}
@@ -282,7 +319,7 @@ $2.50\cdot 10^{-1}$ & $1.77\cdot 10^{-1}$ & $3.23\cdot 10^{-1}$ & $4.00\cdot 10^
 \clearpage
 
 \begin{table}
-  \caption{Same as Figure~\ref{table:evalfreqs1d} except for the regression and spectra averaging for one 119--day segment and $i=1/(86400\cdot 119)=1/(10,281,600)$.}
+  \caption{}
   \centering
   \small
 \begin{tabular}{c c c c c c c c c}
