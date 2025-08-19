@@ -1,4 +1,7 @@
 git pull
+
+cp ../../../KAP_Middelpos_map/map.pdf figures/
+
 DIR=../tfs-20120712-20121107/figures
 cp "$DIR/tsplot-original-Middelpos-tf1.pdf" figures/
 cp "$DIR/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf" figures/
