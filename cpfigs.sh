@@ -13,8 +13,8 @@ cp "$DIR/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf" figures/
 cp "$DIR/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf" figures/
 
 
-cp $RUNDIR/data/Middelpos/tfs-20120712-20120904/Middelpos-tf1-evalfreq_table.tex
-cp $RUNDIR/data/Middelpos/tfs-20120712-20120904/Middelpos-tf3-evalfreq_table.tex
+cp $RUNDIR/data/Middelpos/tfs-20120712-20120904/Middelpos-tf1-evalfreq_table.tex tables/
+cp $RUNDIR/data/Middelpos/tfs-20120712-20120904/Middelpos-tf3-evalfreq_table.tex tables/
 
 cp "$DIR/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.pdf" figures/
 cp "$DIR/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.pdf" figures/
