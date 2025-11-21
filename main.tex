@@ -44,7 +44,7 @@
 %\end{keypoints}
 
 \begin{abstract}
-From 2012-07-12 through 2012-09-04 (55 days), a magnetotelluric (MT) instrument made continuous 1-second recordings at Middelpos, a South African site. Two methods were used to compute the surface impedance transfer function (TF): (1) 55 TFs were computed and averaged using non-overlapping one-day segments, and (2) one TF was computed using the full 55-day segment. The error bars were calculated using parametric formulas that assume a known distribution of errors and a bootstrap method. A frequency--domain quality metric, the signal-to-prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground-conductivity structure. The SE is greater than one only in the range of 1-minute to 6-hours for the $E_x$--related terms and 1-minute to 1-hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars.
+From 2012-07-12 through 2012-09-04 (55 days), a magnetotelluric (MT) instrument 1-second cadence measurements at a site in Middelpos, South Africa. Two methods were used to compute the surface impedance transfer function (TF): (1) 55 TFs were computed and averaged using non-overlapping one-day segments, and (2) one TF was computed using the full 55-day segment. The error bars were calculated using parametric formulas that assume a known distribution of errors and a bootstrap method. A frequency--domain quality metric, the signal-to-prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground-conductivity structure. The SE is greater than one only in the range of 1-minute to 6-hours for the $E_x$--related terms and 1-minute to 1-hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars.
 \end{abstract}
 
 \section{Introduction}
@@ -53,12 +53,12 @@ The surface impedance of the Earth under a power line is an essential parameter 
 
 MT measurements have been made in South Africa by various institutions. The SAMTEX campaign, comprising short-term ($\sim$3 weeks per location) measurements along various transects in South Africa, was conducted by a consortium of geophysicists to characterize the Kaapvaal Craton in the central part of South Africa \cite{Jones2009}. The South African National Space Agency (SANSA) deployed long-term MT measurement stations (operating for several months at each location) at seven locations to provide useful data for GIC estimation by the Space Weather Centre at SANSA (Ref. 3 – report).
 
-Several algorithms have been used to derive the tensor components of the surface impedance. The original work of \cite{Cagniard1953} on MT data analysis assumed orthogonality of the B-- and E--field vectors, which results in a surface impedance matrix with zero off-diagonal components. \cite{Sims1971} introduced regression--based algorithms for computing all components of the impedance tensor. The LEMI software provided with the LEMI magnetometers produced by the LLC in Lviv, Ukraine (Ref), the Egbert algorithm (\cite{Egbert1997}, \cite{Egbert2011}), the Jones algorithm (\cite{Jones1989}; \cite{Chave2012}), and various others \cite{Larsen1996}.
+Several algorithms have been used to derive the tensor components of the surface impedance. The original work of \cite{Cagniard1953} on MT data analysis assumed orthogonality of the B-- and E--field vectors, which results in a surface impedance matrix with zero off-diagonal components. \cite{Sims1971} introduced regression--based algorithms for computing all components of the impedance tensor. The LEMI software provided with the LEMI-417 instrument produced by the LLC in Lviv, Ukraine \cite{LEMI2025}, the Egbert algorithm (\cite{Egbert1997}, \cite{Egbert2011}), the Jones algorithm (\cite{Jones1989}; \cite{Chave2012}), and various others \cite{Larsen1996}.
 
 \cite{Eggers1982} introduced the eigenstate analysis of
 the impedance tensor to allow for non-orthogonality between the magnetic and electric field vectors. \cite{Bahr1988} introduced the telluric vector technique to address local telluric distortion.
 
-Recent papers in which transfer functions were derived from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015}, \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
+Recent papers that derived transfer functions from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015}, \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
 
 \section{Data}
 \label{section:Data}
@@ -77,7 +77,7 @@ The $+x$-axes of both the magnetometer and electric field probe are aligned with
 
 The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x, y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $112$ ($0.002$\%); for $E_y(t)$, the number was $904$ ($0.02$\%).
 
-The averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The averaged amplitudes shown are frequency--domain averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, calculated using propagation of errors in $|\widetilde{A}| = \sqrt{A_r^2 + A_i^2}$, is
+The averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}(a) are shown in Figure~\ref{fig:timeseries}(b). The averaged amplitudes shown are frequency--domain averages of the discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs55d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, calculated using propagation of errors in $|\widetilde{A}| = \sqrt{A_r^2 + A_i^2}$, is
 
 \begin{equation}
 \Delta\big|\widetilde{A}\big| = \sqrt{(A_r\Delta A_r)^2 + (A_i\Delta A_i)^2} / \big|\widetilde{A}\big|
@@ -157,7 +157,7 @@ The signal--to--error ratio, $\text{SE}_k(f_e)$, for component $k=x,y$ of $\math
 \label{eqn:se}
 \end{equation}
 
-\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs119d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$ in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 55$ points. At grid frequencies outside the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs55d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$, in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 55$ points. At grid frequencies outside the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
 
 The squared coherence, $\text{Coh}^2_{XY}(f_e)$, was computed using the 
 
@@ -179,7 +179,7 @@ The signal-to-error and squared coherence associated with the transfer functions
 
 
 \begin{figure}[h!]
-  \vspace{-2em}
+  \vspace{-1.5em}
   \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf}} 
   \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf}} 
   \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf}} 
@@ -276,7 +276,7 @@ We also compared the transfer function at Middelpos with the nearest MT site fro
 \label{appendix:tables}
 
 \begin{table}[hbt]
-  \caption{}
+  \caption{Frequency information for transfer functions computed using 1--day of 1--second cadence data. Evaluation frequencies, $f_e$, evaluation band lower, $f_l$, and upper, $f_u$ bounds, their inverses, $T_e$, $T_l$, and $T_u$. $i_u$ and $i_u$ are the lower and upper band DFT indices, respectively. $N_e$ is the number of DFT frequencies in the band $[f_l, f_u]$.}
   \centering
   \small
   \input{tables/Middelpos-tf1-evalfreq_table}
@@ -286,11 +286,11 @@ We also compared the transfer function at Middelpos with the nearest MT site fro
 \clearpage
 
 \begin{table}
-  \caption{}
+  \caption{Frequency information for transfer functions computed using 1--day of 1--second cadence data. Columns are defined in the caption of ~\ref{table:evalfreqs1d}.}
   \centering
   \small
   \input{tables/Middelpos-tf3-evalfreq_table}
-\label{table:evalfreqs119d}
+\label{table:evalfreqs55d}
 \end{table}
 
 \clearpage
