@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sn-article.aux
+The style file: sn-basic.bst
+Database file #1: ../main.bib
+Warning--I didn't find a database entry for "Naido2012"
+Warning--I didn't find a database entry for "LEMI2025"
+sn-basic.bst [2024/07/19 v1.1 bibliography style]
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+`journal' is a missing field, not a string, for entry Chen2021
+while executing---line 1810 of file sn-basic.bst
+Warning--empty journal in Chen2021
+You've used 29 entries,
+            3567 wiz_defined-function locations,
+            957 strings with 11758 characters,
+and the built_in function-call counts, 22125 in all, are:
+= -- 2049
+> -- 837
+< -- 22
++ -- 328
+- -- 251
+* -- 1810
+:= -- 3268
+add.period$ -- 43
+call.type$ -- 29
+change.case$ -- 238
+chr.to.int$ -- 32
+cite$ -- 30
+duplicate$ -- 1662
+empty$ -- 1831
+format.name$ -- 337
+if$ -- 4639
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 210
+newline$ -- 96
+num.names$ -- 116
+pop$ -- 574
+preamble$ -- 1
+purify$ -- 206
+quote$ -- 0
+skip$ -- 557
+stack$ -- 0
+substring$ -- 1682
+swap$ -- 541
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 249
+warning$ -- 1
+while$ -- 137
+width$ -- 0
+write$ -- 343
+(There was 1 error message)

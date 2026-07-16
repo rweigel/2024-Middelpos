@@ -1,0 +1,153 @@
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\providecommand{\eprint}[2][]{\url{#2}}
+ \bibcommenthead
+
+\bibitem[{Bahr et~al.(1988)}]{Bahr1988}
+Bahr K, et~al (1988) Interpretation of the magnetotelluric impedance tensor:
+  regional induction and local telluric distortion. Journal of geophysics
+  62(1):119--127
+
+\bibitem[{Cagniard(1953)}]{Cagniard1953}
+Cagniard L (1953) Basic theory of the magneto-telluric method of geophysical
+  prospecting. Geophysics 18
+
+\bibitem[{Chave and Jones(2012)}]{Chave2012}
+Chave AD, Jones AG (2012) {The Magnetotelluric Method: Theory and Practice}.
+  Cambridge University Press, \doi{10.1017/cbo9781139020138}
+
+\bibitem[{Chave and Thomson(2004)}]{Chave2004}
+Chave AD, Thomson DJ (2004) Bounded influence magnetotelluric response function
+  estimation. Geophysical Journal International 157(3):988--1006.
+  \doi{10.1111/j.1365-246x.2004.02203.x}
+
+\bibitem[{Chen et~al.(2021)Chen, Mizunaga, and Tanaka}]{Chen2021}
+Chen H, Mizunaga H, Tanaka T (2021) {The Influence of Geomagnetic Storms on
+  Calculating Magnetotelluric Impedance} \doi{10.21203/rs.3.rs-542900/v1}
+
+\bibitem[{Chen et~al.(2022)Chen, Mizunaga, and Tanaka}]{Chen2022}
+Chen H, Mizunaga H, Tanaka T (2022) Influence of geomagnetic storms on the
+  quality of magnetotelluric impedance. Earth, Planets and Space 74(1).
+  \doi{10.1186/s40623-022-01659-6}
+
+\bibitem[{Draper and Smith(1981)}]{Draper1981}
+Draper NR, Smith H (1981) Applied Regression Analysis, 2nd edn. Probability \&
+  Mathematical Statistics S., John Wiley \& Sons, Nashville, TN
+
+\bibitem[{Egbert(1997)}]{Egbert1997}
+Egbert GD (1997) Robust multiple-station magnetotelluric data processing.
+  Geophysical Journal International 130(2):475--496.
+  \doi{10.1111/j.1365-246x.1997.tb05663.x}
+
+\bibitem[{Egbert(2011)}]{Egbert2011}
+Egbert GD (2011) {Magnetotelluric Data Processing}. In: In: Gupta H.K. (eds)
+  Encyclopedia of Solid Earth Geophysics. Encyclopedia of Earth Sciences
+  Series. Springer, Dordrecht. Springer Netherlands, p 816--822,
+  \doi{10.1007/978-90-481-8702-7_128}
+
+\bibitem[{Egbert and Booker(1986)}]{Egbert1986}
+Egbert GD, Booker JR (1986) Robust estimation of geomagnetic transfer
+  functions. Geophysical Journal International 87(1):173--194.
+  \doi{10.1111/j.1365-246x.1986.tb04552.x}
+
+\bibitem[{Eggers(1982)}]{Eggers1982}
+Eggers DE (1982) An eigenstate formulation of the magnetotelluric impedance
+  tensor. Geophysics 47(8):1204--1214
+
+\bibitem[{Fujii et~al.(2015)Fujii, Ookawa, Nagamachi, and Owada}]{Fujii2015}
+Fujii I, Ookawa T, Nagamachi S, et~al (2015) The characteristics of geoelectric
+  fields at {K}akioka, {K}anoya, and {M}emambetsu inferred from voltage
+  measurements during 2000 to 2011. Earth, Planets and Space 67(1).
+  \doi{10.1186/s40623-015-0241-z}
+
+\bibitem[{Heyns et~al.(2020)Heyns, Gaunt, Lotz, and Cilliers}]{Heyns2020}
+Heyns M, Gaunt C, Lotz S, et~al (2020) {Data driven transfer functions and
+  transmission network parameters for GIC modelling}. Electric Power Systems
+  Research 188:106546. \doi{10.1016/j.epsr.2020.106546}
+
+\bibitem[{Jones(2004)}]{Jones2004}
+Jones AG (2004) {KAP03 LMT Time Series Data and Transfer Functions}.
+  \url{https://www.mtnet.info/data/kap03/kap03.html}
+
+\bibitem[{Jones et~al.(1989)Jones, Chave, Egbert, Auld, and Bahr}]{Jones1989}
+Jones AG, Chave AD, Egbert GD, et~al (1989) A comparison of techniques for
+  magnetotelluric response function estimation. J Geophys Res
+  94(B10):14201--14213. \doi{10.1029/jb094ib10p14201}
+
+\bibitem[{Jones et~al.(2009)Jones, Evans, Muller, Hamilton, Miensopust, Garcia,
+  Cole, Ngwisanyi, Hutchins, Fourie, Jelsma, Evans, Aravanis, Pettit, Webb, and
+  Wasborg}]{Jones2009}
+Jones AG, Evans RL, Muller MR, et~al (2009) {Area selection for diamonds using
+  magnetotellurics: Examples from southern Africa}. Lithos 112:83–92.
+  \doi{10.1016/j.lithos.2009.06.011}
+
+\bibitem[{Larsen et~al.(1996)Larsen, Mackie, Manzella, Fiordelisi, and
+  Rieven}]{Larsen1996}
+Larsen JC, Mackie RL, Manzella A, et~al (1996) Robust smooth magnetotelluric
+  transfer functions. Geophysical Journal International 124(3):801--819.
+  \doi{10.1111/j.1365-246x.1996.tb05639.x}
+
+\bibitem[{Moorkamp et~al.(2007)Moorkamp, Jones, and Eaton}]{Moorkamp2007}
+Moorkamp M, Jones AG, Eaton DW (2007) Joint inversion of teleseismic receiver
+  functions and magnetotelluric data using a genetic algorithm: Are seismic
+  velocities and electrical conductivities compatible? Geophysical Research
+  Letters 34(16). \doi{10.1029/2007gl030519}
+
+\bibitem[{Nguuri et~al.(2001)Nguuri, Gore, James, Webb, Wright, Zengeni,
+  Gwavava, and Snoke}]{Nguuri2001}
+Nguuri TK, Gore J, James DE, et~al (2001) Crustal structure beneath southern
+  africa and its implications for the formation and evolution of the kaapvaal
+  and zimbabwe cratons. Geophysical Research Letters 28(13):2501–2504.
+  \doi{10.1029/2000gl012587}
+
+\bibitem[{{NOAA National Geophysical Data Center}(2006)}]{NCEI2006}
+{NOAA National Geophysical Data Center} (2006) {2-minute Gridded Global Relief
+  Data (ETOPO2) v2}. \doi{10.7289/V5J1012Q},
+  \urlprefix\url{https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ngdc.mgg.dem:301}
+
+\bibitem[{Pedersen(1988)}]{Pedersen1988}
+Pedersen LB (1988) Some aspects of magnetotelluric field procedures. Surveys in
+  Geophysics 9(3–4):245–257. \doi{10.1007/bf01901625}
+
+\bibitem[{{Simpson} and {Bahr}(2005)}]{Simpson2005}
+{Simpson} F, {Bahr} K (2005) {{Practical Magnetotellurics}}. Cambridge
+  University Press, \doi{10.1017/cbo9780511614095}
+
+\bibitem[{Sims et~al.(1971)Sims, Bostick, and Smith}]{Sims1971}
+Sims WE, Bostick FX, Smith HW (1971) {The Estimation Of Magnetotelluric
+  Impedance Tensor Elements From Measured Data}. Geophysics 36(5):938--942.
+  \doi{10.1190/1.1440225}
+
+\bibitem[{Miranda~de Sá(2006)}]{Miranda2006}
+Miranda~de Sá AMF (2006) A note on the coherence-based signal-to-noise ratio
+  estimation in systems with periodic inputs. Journal of the Franklin Institute
+  343(7):688–698. \doi{10.1016/j.jfranklin.2006.05.002}
+
+\bibitem[{Th{\'e}bault et~al.(2015)Th{\'e}bault, Finlay, Alken, Beggan, Canet,
+  Chulliat, Langlais, Lesur, Lowes, Manoj et~al.}]{igrf}
+Th{\'e}bault E, Finlay CC, Alken P, et~al (2015) {Evaluation of candidate
+  geomagnetic field models for IGRF-12}. Tech. rep., Springer
+
+\bibitem[{Thomson and Vernon(2016)}]{Thomson2016}
+Thomson DJ, Vernon FL (2016) {Some Comments on the Analysis of “Big”
+  Scientific Time Series}. Proceedings of the IEEE 104(11):2220–2249.
+  \doi{10.1109/jproc.2016.2598218}
+
+\bibitem[{Vozoff(1991)}]{Vozoff1991}
+Vozoff K (1991) {The Magnetotelluric Method}, Society of Exploration
+  Geophysicists, p 641–712
+
+\bibitem[{Weigel and Cilliers(2019)}]{Weigel2019}
+Weigel RS, Cilliers PJ (2019) An evaluation of the frequency independence
+  assumption of power system coefficients used in geomagnetically induced
+  current estimates. Space Weather 17(12):1674–1688
+
+\bibitem[{Wight and Bostick(1980)}]{Wight1980}
+Wight D, Bostick F (1980) {Cascade decimation--A technique for real time
+  estimation of power spectra}. In: {ICASSP '80. IEEE International Conference
+  on Acoustics, Speech, and Signal Processing}, pp 626--629
+
+\end{thebibliography}
