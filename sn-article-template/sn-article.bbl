@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -96,11 +96,15 @@ Moorkamp M, Jones AG, Eaton DW (2007) Joint inversion of teleseismic receiver
   velocities and electrical conductivities compatible? Geophysical Research
   Letters 34(16). \doi{10.1029/2007gl030519}
 
+\bibitem[{NASA(2025)}]{LEMI2025}
+NASA (2025) {LEMI Sensors}. \url{https://lemisensors.com/}, accessed:
+  2025-11-21
+
 \bibitem[{Nguuri et~al.(2001)Nguuri, Gore, James, Webb, Wright, Zengeni,
   Gwavava, and Snoke}]{Nguuri2001}
-Nguuri TK, Gore J, James DE, et~al (2001) Crustal structure beneath southern
-  africa and its implications for the formation and evolution of the kaapvaal
-  and zimbabwe cratons. Geophysical Research Letters 28(13):2501–2504.
+Nguuri TK, Gore J, James DE, et~al (2001) {Crustal structure beneath southern
+  Africa and its implications for the formation and evolution of the Kaapvaal
+  and Zimbabwe cratons}. Geophysical Research Letters 28(13):2501–2504.
   \doi{10.1029/2000gl012587}
 
 \bibitem[{{NOAA National Geophysical Data Center}(2006)}]{NCEI2006}
