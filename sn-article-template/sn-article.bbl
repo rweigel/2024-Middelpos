@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -6,14 +6,18 @@
 \providecommand{\eprint}[2][]{\url{#2}}
  \bibcommenthead
 
-\bibitem[{Bahr et~al.(1988)}]{Bahr1988}
-Bahr K, et~al (1988) Interpretation of the magnetotelluric impedance tensor:
-  regional induction and local telluric distortion. Journal of geophysics
-  62(1):119--127
-
-\bibitem[{Cagniard(1953)}]{Cagniard1953}
-Cagniard L (1953) Basic theory of the magneto-telluric method of geophysical
-  prospecting. Geophysics 18
+\bibitem[{Alken et~al.(2021)Alken, Thébault, Beggan, Amit, Aubert, Baerenzung,
+  Bondar, Brown, Califf, Chambodut, Chulliat, Cox, Finlay, Fournier, Gillet,
+  Grayver, Hammer, Holschneider, Huder, Hulot, Jager, Kloss, Korte, Kuang,
+  Kuvshinov, Langlais, Léger, Lesur, Livermore, Lowes, Macmillan, Magnes,
+  Mandea, Marsal, Matzka, Metman, Minami, Morschhauser, Mound, Nair, Nakano,
+  Olsen, Pavón-Carrasco, Petrov, Ropp, Rother, Sabaka, Sanchez, Saturnino,
+  Schnepf, Shen, Stolle, Tangborn, Tøffner-Clausen, Toh, Torta, Varner,
+  Vervelidou, Vigneron, Wardinski, Wicht, Woods, Yang, Zeren, and
+  Zhou}]{Alken2021}
+Alken P, Thébault E, Beggan CD, et~al (2021) {International Geomagnetic
+  Reference Field: the thirteenth generation}. Earth, Planets and Space 73(1).
+  \doi{10.1186/s40623-020-01288-x}
 
 \bibitem[{Chave and Jones(2012)}]{Chave2012}
 Chave AD, Jones AG (2012) {The Magnetotelluric Method: Theory and Practice}.
@@ -53,10 +57,6 @@ Egbert GD, Booker JR (1986) Robust estimation of geomagnetic transfer
   functions. Geophysical Journal International 87(1):173--194.
   \doi{10.1111/j.1365-246x.1986.tb04552.x}
 
-\bibitem[{Eggers(1982)}]{Eggers1982}
-Eggers DE (1982) An eigenstate formulation of the magnetotelluric impedance
-  tensor. Geophysics 47(8):1204--1214
-
 \bibitem[{Fujii et~al.(2015)Fujii, Ookawa, Nagamachi, and Owada}]{Fujii2015}
 Fujii I, Ookawa T, Nagamachi S, et~al (2015) The characteristics of geoelectric
   fields at {K}akioka, {K}anoya, and {M}emambetsu inferred from voltage
@@ -84,6 +84,11 @@ Jones AG, Evans RL, Muller MR, et~al (2009) {Area selection for diamonds using
   magnetotellurics: Examples from southern Africa}. Lithos 112:83–92.
   \doi{10.1016/j.lithos.2009.06.011}
 
+\bibitem[{Kotzé et~al.(2015)Kotzé, Cilliers, and Sutcliffe}]{Kotz2015}
+Kotzé PB, Cilliers PJ, Sutcliffe PR (2015) {The role of SANSA's geomagnetic
+  observation network in space weather monitoring: A review}. Space Weather
+  13(10):656--664. \doi{10.1002/2015sw001279}
+
 \bibitem[{Larsen et~al.(1996)Larsen, Mackie, Manzella, Fiordelisi, and
   Rieven}]{Larsen1996}
 Larsen JC, Mackie RL, Manzella A, et~al (1996) Robust smooth magnetotelluric
@@ -95,6 +100,10 @@ Moorkamp M, Jones AG, Eaton DW (2007) Joint inversion of teleseismic receiver
   functions and magnetotelluric data using a genetic algorithm: Are seismic
   velocities and electrical conductivities compatible? Geophysical Research
   Letters 34(16). \doi{10.1029/2007gl030519}
+
+\bibitem[{Naidu(2012)}]{Naidu2012}
+Naidu GD (2012) {Magnetotellurics: Basic Theoretical Concepts}, Springer Berlin
+  Heidelberg, pp 13--35. \doi{10.1007/978-3-642-28442-7_2}
 
 \bibitem[{NASA(2025)}]{LEMI2025}
 NASA (2025) {LEMI Sensors}. \url{https://lemisensors.com/}, accessed:
@@ -129,11 +138,6 @@ Sims WE, Bostick FX, Smith HW (1971) {The Estimation Of Magnetotelluric
 Miranda~de Sá AMF (2006) A note on the coherence-based signal-to-noise ratio
   estimation in systems with periodic inputs. Journal of the Franklin Institute
   343(7):688–698. \doi{10.1016/j.jfranklin.2006.05.002}
-
-\bibitem[{Th{\'e}bault et~al.(2015)Th{\'e}bault, Finlay, Alken, Beggan, Canet,
-  Chulliat, Langlais, Lesur, Lowes, Manoj et~al.}]{igrf}
-Th{\'e}bault E, Finlay CC, Alken P, et~al (2015) {Evaluation of candidate
-  geomagnetic field models for IGRF-12}. Tech. rep., Springer
 
 \bibitem[{Thomson and Vernon(2016)}]{Thomson2016}
 Thomson DJ, Vernon FL (2016) {Some Comments on the Analysis of “Big”
