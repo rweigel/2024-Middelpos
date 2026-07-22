@@ -8,45 +8,45 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 `journal' is a missing field, not a string, for entry Chen2021
 while executing---line 1810 of file sn-basic.bst
 Warning--empty journal in Chen2021
-You've used 29 entries,
+You've used 30 entries,
             3567 wiz_defined-function locations,
-            957 strings with 12691 characters,
-and the built_in function-call counts, 24178 in all, are:
-= -- 2213
-> -- 1175
+            966 strings with 13098 characters,
+and the built_in function-call counts, 25299 in all, are:
+= -- 2320
+> -- 1228
 < -- 22
-+ -- 438
-- -- 362
-* -- 2041
-:= -- 3591
-add.period$ -- 45
-call.type$ -- 29
-change.case$ -- 294
-chr.to.int$ -- 32
-cite$ -- 30
-duplicate$ -- 1661
-empty$ -- 1831
-format.name$ -- 447
-if$ -- 5042
++ -- 458
+- -- 378
+* -- 2147
+:= -- 3752
+add.period$ -- 47
+call.type$ -- 30
+change.case$ -- 305
+chr.to.int$ -- 33
+cite$ -- 31
+duplicate$ -- 1750
+empty$ -- 1918
+format.name$ -- 466
+if$ -- 5278
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 207
-newline$ -- 96
-num.names$ -- 116
-pop$ -- 681
+missing$ -- 214
+newline$ -- 99
+num.names$ -- 120
+pop$ -- 705
 preamble$ -- 1
-purify$ -- 263
+purify$ -- 273
 quote$ -- 0
-skip$ -- 618
+skip$ -- 641
 stack$ -- 0
-substring$ -- 1659
-swap$ -- 549
+substring$ -- 1756
+swap$ -- 567
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 246
+type$ -- 255
 warning$ -- 1
-while$ -- 135
+while$ -- 139
 width$ -- 0
-write$ -- 346
+write$ -- 358
 (There was 1 error message)

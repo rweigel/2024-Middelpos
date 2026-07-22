@@ -186,7 +186,7 @@ where $\Delta A_\text{r}$ and $\Delta A_\text{i}$ are the lengths of the 95\% co
      \subfigure[]{\includegraphics[width=0.45\textwidth]{../figures/tsplot-original-Middelpos-tf1.pdf}}
      \hspace{10pt}
      \subfigure[]{\includegraphics[width=0.45\textwidth]{../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}}
-     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
+     \caption{(a) Measurements used for analysis after mean subtraction and despiking. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a). The vertical bars correspond to 95\% confidence intervals and a filled circle indicates the computed lower bound is below zero.}
   \label{fig:timeseries}
 \end{figure}
 
@@ -213,19 +213,19 @@ $\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to estimate the comple
 \noindent using a method described by \cite{Sims1971}: for each $\mathbf{\widetilde{E}}$ vector component $k=x\mbox{ or }y$, a four parameter over--determined linear regression is performed using
 
 \begin{equation}
-\widetilde{E}_k(f) = \widetilde{Z}_{kx}(f)\widetilde{B}_x(f) + \widetilde{Z}_{ky}(f)\widetilde{B}_y(f)
-\label{eqn:single}
+  \widetilde{E}_k(f) = \widetilde{Z}_{kx}(f)\widetilde{B}_x(f) + \widetilde{Z}_{ky}(f)\widetilde{B}_y(f)
+  \label{eqn:single}
 \end{equation}
 
-\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because the two regression parameters $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ in Equation~\ref{eqn:single} are complex--valued; the actual regression is performed using only real numbers -- see \cite{Egbert1986}).
+\noindent with values of $f$ in a band around $f_e$. (The number of parameters is four because the two regression parameters $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ in Equation~\ref{eqn:single} are complex--valued; the actual regression is performed using only real numbers -- see \cite{Egbert1986}). This regression method corresponds to minimizing the least-squared error between the predicted and measured $\widetilde{E}_k(f)$ values.
 
-Two methods have been used for computing the Fourier coefficients -- one uses the standard DFT (Discrete Fourier Transform) formula for equally spaced records, typically implemented using the FFT algorithm. The other is an approximation based on the method of ``Cascade Decimation" \citep{Wight1980}, which can require less memory and produce logarithmically spaced evaluation frequencies. Here, we use the standard DFT formula because it is not an approximation.
+Historically, two methods have been used for computing the Fourier coefficients for uniform cadence time series -- one uses the standard DFT (Discrete Fourier Transform) formula for equally spaced records, typically implemented using the FFT algorithm. The other is an approximation based on the method of ``Cascade Decimation" \citep{Wight1980}, which can require less memory and produces logarithmically spaced evaluation frequencies. Here, we use the standard DFT formula because it is not an approximation and memory is not a constraint for the data considered.
 
-There are two general methods for computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ for each evaluation frequency: (1) compute the Fourier coefficients using the full time series and then perform regression using the Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression on each segment using the Fourier coefficients in a band centered on the evaluation frequency to find segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$, and then average the segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ are unweighted averages. 
+There are two general methods for computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ for each evaluation frequency when there are not significant data gaps: (1) compute the Fourier coefficients using the full time series and then perform regression using the Fourier coefficients in a band centered on the evaluation frequency and (2) split the full time series into (possibly overlapping) segments, perform a regression on each segment using the Fourier coefficients in a band centered on the evaluation frequency to find segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$, and then average the segment estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$. In this paper, we present results from both methods; for the second method, non--overlapping time series segments were used, and the estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ are unweighted averages. 
 
-A key result is that there are significant differences in the transfer functions computed using these two approaches. We have verified that the two approaches should give transfer functions without statistically significant differences by generating a simulated $\mathbf{E}(t)$ by convolving a white noise $\mathbf{B}(t)$ with idealized transfer functions (the two approaches will not give identical transfer functions due to the differences in frequency grids, but the average transfer functions from the two approaches will converge). As a result, we conclude that the observed differences are likely due to non-stationarity.
+A key result is that there are significant differences in the transfer functions computed using these two approaches. We have verified that the two approaches should give transfer functions without statistically significant differences by generating a simulated $\mathbf{E}(t)$ by convolving a white noise $\mathbf{B}(t)$ with a known transfer function $\boldsymbol{\mathcal{\widetilde{Z}}}$ $N$ times. The two approaches will not give identical transfer functions due to the differences in frequency grids, but the averaged and interpolated transfer functions for large $N$ converges. As a result, we conclude that the observed differences are likely due to non-stationarity.
 
-In the literature, many results are presented using only one algorithm and a single set of parameters for that algorithm. However, it seems that, given that these two reasonable approaches for computing a transfer function can yield different results, there is an ``algorithmic uncertainty" that should be accounted for by computing the transfer function using different algorithms and varying parameter values for a given algorithm. There is also an uncertainty due to the data selection; \cite{Chen2022} noted that for some SAMTEX sites, the transfer functions were dependent on the time intervals used in their computation, in particular on whether the interval contained a period of high geomagnetic activity. This is expected because the plane wave approximation is invalid when geomagnetic activity is strong. Conversely, in the limit of low geomagnetic activity, the signal-to-noise ratio is low, leading to large error bars in the computed transfer functions. 
+In the literature, results are often presented using only one algorithm and a single set of parameters for that algorithm. However, it seems that, given that these two reasonable approaches for computing a transfer function can yield different results, there is an ``algorithmic uncertainty" that should be accounted for by computing the transfer function using different algorithms and varying parameter values for a given algorithm. There is also an uncertainty due to the data selection; \cite{Chen2022} noted that for some SAMTEX sites, the transfer functions were dependent on the time intervals used in their computation, in particular on whether the interval contained a period of high geomagnetic activity. This is expected because the plane wave approximation is invalid when geomagnetic activity is strong. Conversely, in the limit of low geomagnetic activity, the signal-to-noise ratio is low, leading to large error bars in the computed transfer functions.
 
 There are two common modifications to these estimation methods. The first is the ``remote reference"  method, which uses $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such measurements. The second uses a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically downweights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error is less than 1.0.
 
@@ -234,37 +234,63 @@ There are two common modifications to these estimation methods. The first is the
 
 Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $55$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the average of $55$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using propagation of errors on
 
-$$\phi_{ij}=\tan^{-1}[\text{Im}(\widetilde{Z}_{ij})/\text{Re}(\widetilde{Z}_{ij})]$$
+$$\phi_{ij} = \tan^{-1}[
+  \text{Im}(\widetilde{Z}_{ij})
+  /
+  \text{Re}(\widetilde{Z}_{ij})],
+$$
 
 \noindent which gives
 
-$$\Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2) \sqrt{ \big[\text{Im}(\widetilde{Z}_{ij})\text{Re}(\Delta \widetilde{Z}_{ij})\big]^2 + \big[\text{Re}(\widetilde{Z}_{ij})\text{Im}(\Delta \widetilde{Z}_{ij}) \big]^2}.$$
+$$
+  \Delta\phi_{ij} = (1/|\widetilde{Z}_{ij}|^2)
+  \sqrt{
+    \big[
+      \text{Im}(\widetilde{Z}_{ij})\text{Re}(\Delta \widetilde{Z}_{ij})
+    \big]^2
+    +
+    \big[
+      \text{Re}(\widetilde{Z}_{ij})\text{Im}(\Delta \widetilde{Z}_{ij})
+    \big]^2
+  },
+$$
 
-\noindent where $\Delta \widetilde{Z}_{ij}$ is the 95\% confidence interval length for element $\widetilde{Z}_{ij}$ of $\boldsymbol{\mathcal{\widetilde{Z}}}$, $|\boldsymbol{\cdotp}|$ is the complex magnitude, and $\text{Re}(\boldsymbol{\cdotp})$ and $\text{Im}(\boldsymbol{\cdotp})$ are the real and imaginary parts of the argument, respectively.
+\noindent
+where $\Delta \widetilde{Z}_{ij}$ is the 95\% confidence interval length for element $\widetilde{Z}_{ij}$ of $\boldsymbol{\mathcal{\widetilde{Z}}}$, $|\boldsymbol{\cdotp}|$ is the complex magnitude, and $\text{Re}(\boldsymbol{\cdotp})$ and $\text{Im}(\boldsymbol{\cdotp})$ are the real and imaginary parts of the argument, respectively.
 
+The quality of the computed transfer functions were assessed using the traditional coherence metric and also a signal--to--error metric.
 
-The signal--to--error ratio, $\text{SE}_k(f_e)$, for component $k=x\mbox{ or }y$ of $\mathbf{E}$ was calculated using 
+The squared coherence, $\text{Coh}^2_{XY}(f_e)$, was computed using
 
 \begin{equation}
-\text{SE}_k(f_e) = \frac{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{E}_k(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e}\left|\Delta\widetilde{E}_k(f_j)\right|^2}
+  \text{Coh}^2_{XY}(f_e) = \frac{\left|\displaystyle\sum_{j=1}^{N_e}\widetilde{X}^*(f_j)\widetilde{Y}(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{X}(f_j)\right|^2\sum_{j=1}^{N_e} \left|\widetilde{Y}(f_j)\right|^2},
+\end{equation}
+
+\noindent
+where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs55d} and~\ref{table:evalfreqs1d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$, in each band for each regression method.
+
+95\% confidence intervals were computed using bootstrap resampling: for each $f_e$ band, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{Coh}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+
+Traditionally, the primary quality metric used for evaluating the transfer function is $\text{Coh}^2_{E_xB_y}$ and $\text{Coh}^2_{E_yB_x}$. A limitation of this metric is that it does not directly quantify how well the predicted electric field matches the measured electric field. It quantifies only the coherence between the measured quantities. As a result, we have also computed the coherence between the measured and predicted electric field, $\text{Coh}^2_{E_kE^\text{p}_k}$ ($k=x\mbox{ or }y$), as it is a more direct measure of the ability of the transfer function to reproduce the signal.
+
+Although $\text{Coh}^2_{E_kE^\text{p}_k}$ is a more direct measure of how well a transfer function reproduces the measured electric field is still has a limitation --- two signals that are identical except for a scaling factor will have the same coherence for any scaling factor. As a result, we have introduced the signal--to--error, which can be used to make a more direct assessment of how well the estimated transfer function captures the measured signal.
+
+The signal--to--error ratio, $\text{SE}_k(f_e)$, for component $k=x\mbox{ or }y$ of $\mathbf{E}$ was calculated using
+
+\begin{equation}
+\text{SE}_k(f_e) = \frac{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{E}_k(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e}\left|\Delta\widetilde{E}_k(f_j)\right|^2},
 \label{eqn:se}
 \end{equation}
 
-\noindent where $j$ is the index of the DFT frequency in the band centered on $f_e=1/T_e$; Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs55d} in Appendix~\ref{appendix:tables} list the band centers, ranges, and number of frequencies, $N_e$, in each band for each regression method. The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. The predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 55$ points. At grid frequencies outside the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero. 95\% confidence intervals were computed using bootstrap resampling: at each $f_e$, the $N_e$ pairs of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were randomly selected with replacement, and the sums in the $\text{SE}$ formula were computed using these randomly selected pairs. This process was repeated $1,000$ times, and the results were sorted in ascending order; the maximum $\text{SE}$ error bar value is the $975$th value in the sorted list, and the minimum is the $25$th. No confidence intervals were computed if $N_e\le 10$.
+\noindent where the summation frequencies and $f_e$ values are the same as those used for computing the $\text{Coh}$.
 
-The squared coherence, $\text{Coh}^2_{XY}(f_e)$, was computed using the 
+The error, $\Delta\widetilde{E}_k = \widetilde{E}_k^{\text{p}}-\widetilde{E}_k$, is the difference between the complex--valued DFT amplitudes of the predicted, $E_k^\text{p}(t)$, and measured, $E_k(t)$, signals after convolution with a Parzen window. For both regression methods, the predicted signal, $E_k^{\text{p}}$, was computed by linearly interpolating the real and imaginary parts of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ onto a uniform frequency grid of $N=86400\times 55$ points. At interpolation grid frequencies outside the range of $f_e$ values, the interpolated values of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ were set to zero.
 
-\begin{equation}
-\text{Coh}^2_{XY}(f_e) = \frac{\left|\displaystyle\sum_{j=1}^{N_e}\widetilde{X}^*(f_j)\widetilde{Y}(f_j)\right|^2}{\displaystyle\sum_{j=1}^{N_e} \left|\widetilde{X}(f_j)\right|^2\sum_{j=1}^{N_e} \left|\widetilde{Y}(f_j)\right|^2}
-\end{equation}
-
-\noindent where the summation frequencies and $f_e$ values are the same as those used for computing the $\text{SE}$. 95\% error bars were computed using the same as method used for $\text{SE}$. The coherence was computed between the predicted field, $E^\text{p}_k(t)$, and the measured field, $E_k(t)$, and also between $E_x^\text{p}(t)$ and $B_y(t)$ and between $E_y^\text{p}(t)$ and $B_x(t)$.
-
-Traditionally, the primary quality metric used for evaluating the transfer function is the $\text{Coh}^2_{E_xB_y}$ and $\text{Coh}^2_{E_yB_x}$. Here, we have also computed the coherences between the measured and predicted fields, $\text{Coh}^2_{E_kE^\text{p}_k}$ ($k=x\mbox{ or }y$), as it is a more direct measure of the ability of the transfer function to reproduce the signal. Coherence has a limitation, however. Two signals that are identical except for a scaling factor will have the same coherence for any scaling factor. As a result, we have introduced the signal--to--error, which can be used to make a more direct assessment of how well the transfer function captures the measured signal.
+95\% error bars were computed using the same as method used for $\text{Coh}$. 
 
 Note that $\text{SE}$ defined by Equation~\ref{eqn:se} differs in general from the signal--to--noise ratio, $\text{Coh}^2/(1-\text{Coh}^2)$ that applies only if the input signal and the noise in the output signal (which is unknown) are uncorrelated and the input signal has no noise (\cite{Miranda2006}; \cite{Pedersen1988}).
 
-The signal-to-error and squared coherence associated with the transfer functions shown in Figure~\ref{fig:z} are shown in Figure~\ref{fig:se}. In the top panel of Figure~\ref{fig:se}(a), we see that the transfer function for $E_x$ only captures the variations in the data at periods longer than approximately 40 seconds, and that the model computed using one 55-day segment has a slightly higher $\text{SE}$ ratio. For $E_y$, the top panel of Figure~\ref{fig:se}(b) shows that the period range over which the transfer function produces useful predictions is from approximately 6 minutes to 6 hours.
+The squared coherence and signal-to-error associated with the transfer functions shown in Figure~\ref{fig:z} are shown in Figure~\ref{fig:se}. In the top panel of Figure~\ref{fig:se}(a), we see that the transfer function for $E_x$ only captures the variations in the data at periods longer than approximately 40 seconds, and that the model computed using one 55-day segment has a slightly higher $\text{SE}$ ratio. For $E_y$, the top panel of Figure~\ref{fig:se}(b) shows that the period range over which the transfer function produces useful predictions is from approximately 6 minutes to 6 hours.
 %sxx = abs(sum(dftsegsx{s}.*conj(dftsegsx{s}),1));
 %syy = abs(sum(dftsegsy{s}.*conj(dftsegsy{s}),1));
 %sxy = abs(sum(conj(dftsegsx{s}).*dftsegsy{s},1));
@@ -295,9 +321,9 @@ The signal-to-error and squared coherence associated with the transfer functions
 
 \section{Comparison to KAP103}
 
-\cite{Jones2009} presented a summary of an MT survey of sites in South Africa; the results of the transfer function calculations are available from ~\cite{Jones2004}. The transfer functions were computed using the Bounded Influence Remote Reference algorithm \cite{Chave2004}. The site nearest Middelpos is KAP103, which is shown in Figure~\ref{fig:map}.
+\cite{Jones2009} presented a summary of an MT survey of sites in South Africa; the results of the transfer function calculations are available from ~\cite{Jones2004}, which were computed using the Bounded Influence Remote Reference algorithm \citep{Chave2004}. The site nearest Middelpos is KAP103, which is shown in Figure~\ref{fig:map}.
 
-In Figure~\ref{fig:timeseries-KAP103}, the 26--day magnetic and electric time series are shown along with the magnitude of their Fourier coefficients. The measurement interval included the large geomagnetic storm of November 20--22, 2003, that followed the October 31st ``Halloween" storm.
+In Figure~\ref{fig:timeseries-KAP103}, the 26--day magnetic and electric time series are shown along with the magnitude of their Fourier coefficients. The measurement interval included the large geomagnetic storm of November 20--22, 2003, that followed the October 31st ``Halloween" storm \citep{Gopalswamy2005}.
 
 In Figure~\ref{fig:z-compare-KAP103}, we compare the pre--computed KAP103 transfer function (~\cite{Jones2004}) with that computed at Middelpos (corresponding to the ``1 55--day segment" lines shown in Figure~\ref{fig:z}). In addition, we have used the time series shown in Figure~\ref{fig:timeseries-KAP103} and the single transfer methodology described in the previous section.
 
@@ -324,7 +350,7 @@ To determine if the large geomagnetic storm may explain some of the differences,
      \subfigure[]{\includegraphics[width=0.45\textwidth]{../figures/tsplot-original-KAP103-tf1.pdf}}
      \hspace{10pt}
      \subfigure[]{\includegraphics[width=0.45\textwidth]{../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf}}
-     \caption{(a) Measurements used for analysis. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a).}
+     \caption{(a) Measurements used for analysis. (b) Magnitudes of discrete Fourier transform coefficients for measurements in (a). The vertical bars correspond to 95\% confidence intervals.}
   \label{fig:timeseries-KAP103}
 \end{figure}
 

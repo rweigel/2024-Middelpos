@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{{#1}}
 \providecommand{\urlprefix}{URL }
@@ -63,6 +63,12 @@ Fujii I, Ookawa T, Nagamachi S, et~al (2015) The characteristics of geoelectric
   measurements during 2000 to 2011. Earth, Planets and Space 67(1).
   \doi{10.1186/s40623-015-0241-z}
 
+\bibitem[{Gopalswamy et~al.(2005)Gopalswamy, Barbieri, Cliver, Lu, Plunkett,
+  and Skoug}]{Gopalswamy2005}
+Gopalswamy N, Barbieri L, Cliver EW, et~al (2005) {Introduction to violent
+  Sun-Earth connection events of October-November 2003}. Journal of Geophysical
+  Research: Space Physics 110(A9). \doi{https://doi.org/10.1029/2005JA011268}
+
 \bibitem[{Heyns et~al.(2020)Heyns, Gaunt, Lotz, and Cilliers}]{Heyns2020}
 Heyns M, Gaunt C, Lotz S, et~al (2020) {Data driven transfer functions and
   transmission network parameters for GIC modelling}. Electric Power Systems
@@ -113,7 +119,7 @@ NASA (2025) {LEMI Sensors}. \url{https://lemisensors.com/}, accessed:
   Gwavava, and Snoke}]{Nguuri2001}
 Nguuri TK, Gore J, James DE, et~al (2001) {Crustal structure beneath southern
   Africa and its implications for the formation and evolution of the Kaapvaal
-  and Zimbabwe cratons}. Geophysical Research Letters 28(13):2501–2504.
+  and Zimbabwe cratons}. Geophysical Research Letters 28(13):2501--2504.
   \doi{10.1029/2000gl012587}
 
 \bibitem[{{NOAA National Geophysical Data Center}(2006)}]{NCEI2006}
