@@ -3,50 +3,56 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: sn-article.aux
 The style file: sn-basic.bst
 Database file #1: ../main.bib
+Repeated entry---line 472 of file ../main.bib
+ : @article{Cagniard1953
+ :                      ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Pirjola2000"
 sn-basic.bst [2024/07/19 v1.1 bibliography style]
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 `journal' is a missing field, not a string, for entry Chen2021
 while executing---line 1810 of file sn-basic.bst
 Warning--empty journal in Chen2021
-You've used 30 entries,
+Warning--missing publisher in Pirjola1982
+You've used 32 entries,
             3567 wiz_defined-function locations,
-            966 strings with 13098 characters,
-and the built_in function-call counts, 25299 in all, are:
-= -- 2320
-> -- 1228
-< -- 22
-+ -- 458
-- -- 378
-* -- 2147
-:= -- 3752
-add.period$ -- 47
-call.type$ -- 30
-change.case$ -- 305
-chr.to.int$ -- 33
-cite$ -- 31
-duplicate$ -- 1750
-empty$ -- 1918
-format.name$ -- 466
-if$ -- 5278
+            979 strings with 13382 characters,
+and the built_in function-call counts, 26183 in all, are:
+= -- 2393
+> -- 1248
+< -- 24
++ -- 466
+- -- 384
+* -- 2198
+:= -- 3901
+add.period$ -- 48
+call.type$ -- 32
+change.case$ -- 316
+chr.to.int$ -- 35
+cite$ -- 34
+duplicate$ -- 1827
+empty$ -- 2004
+format.name$ -- 474
+if$ -- 5460
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 214
-newline$ -- 99
-num.names$ -- 120
-pop$ -- 705
+missing$ -- 227
+newline$ -- 105
+num.names$ -- 128
+pop$ -- 737
 preamble$ -- 1
-purify$ -- 273
+purify$ -- 283
 quote$ -- 0
-skip$ -- 641
+skip$ -- 670
 stack$ -- 0
-substring$ -- 1756
-swap$ -- 567
+substring$ -- 1798
+swap$ -- 587
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 255
-warning$ -- 1
-while$ -- 139
+type$ -- 270
+warning$ -- 2
+while$ -- 146
 width$ -- 0
-write$ -- 358
-(There was 1 error message)
+write$ -- 378
+(There were 2 error messages)

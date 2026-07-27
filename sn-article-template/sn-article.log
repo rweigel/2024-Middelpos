@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  22 JUL 2026 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 JUL 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -583,24 +583,24 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./sn-article.aux)
 \openout1 = `sn-article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -659,57 +659,57 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \S on input line 93.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 93.
+LaTeX Info: Redefining \S on input line 99.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 99.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 93.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 99.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 93.
-Package hyperref Info: Link coloring ON on input line 93.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 99.
+Package hyperref Info: Link coloring ON on input line 99.
 
 (./sn-article.out) (./sn-article.out)
 \@outlinefile=\write3
 \openout3 = `sn-article.out'.
 
 \c@lstlisting=\count350
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 145.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 151.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145
+LaTeX Font Info:    Trying to load font information for U+msa on input line 151
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145
+LaTeX Font Info:    Trying to load font information for U+msb on input line 151
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
-5.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
+1.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 145.
+(Font)              size <8> substituted on input line 151.
 
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
-5.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 15
+1.
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 145.
+(Font)              size <6> substituted on input line 151.
 
-LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 145
+LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 151
 .
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.51686> not available
-(Font)              size <5> substituted on input line 145.
+(Font)              size <5> substituted on input line 151.
 
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 14
-5.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 15
+1.
 
 
 
@@ -718,17 +718,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<../figures/site.png, id=99, 572.3784pt x 344.0052pt>
-File: ../figures/site.png Graphic file (type png)
-<use ../figures/site.png>
-Package pdftex.def Info: ../figures/site.png  used on input line 168.
-(pdftex.def)             Requested size: 372.0pt x 223.57448pt.
+
+Package natbib Warning: Citation `Pirjola2000' on page 2 undefined on input lin
+e 156.
+
 
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
+<../figures/site.png, id=130, 572.3784pt x 344.0052pt>
+File: ../figures/site.png Graphic file (type png)
+<use ../figures/site.png>
+Package pdftex.def Info: ../figures/site.png  used on input line 176.
+(pdftex.def)             Requested size: 372.0pt x 223.57448pt.
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -738,116 +743,51 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.184 
+l.185 
        <../figures/site.png>]
-<../figures/tsplot-original-Middelpos-tf1.pdf, id=149, 262.9825pt x 270.00874pt
+<../figures/tsplot-original-Middelpos-tf1.pdf, id=150, 262.9825pt x 270.00874pt
 >
 File: ../figures/tsplot-original-Middelpos-tf1.pdf Graphic file (type pdf)
 <use ../figures/tsplot-original-Middelpos-tf1.pdf>
 Package pdftex.def Info: ../figures/tsplot-original-Middelpos-tf1.pdf  used on 
-input line 186.
-(pdftex.def)             Requested size: 167.39886pt x 171.87799pt.
-<../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf, id=150, 264
+input line 194.
+(pdftex.def)             Requested size: 372.0pt x 381.9566pt.
+<../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf, id=151, 264
 .99pt x 273.02pt>
 File: ../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf Graphic
  file (type pdf)
 <use ../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf>
 Package pdftex.def Info: ../figures/dftplot-original-averaged-magnitudes-Middel
-pos-tf1.pdf  used on input line 188.
-(pdftex.def)             Requested size: 167.39886pt x 172.47426pt.
+pos-tf1.pdf  used on input line 200.
+(pdftex.def)             Requested size: 372.0pt x 383.3002pt.
 
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4
+ [4]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.223 
-       <../figures/tsplot-original-Middelpos-tf1.pdf> <../figures/dftplot-origi
-nal-averaged-magnitudes-Middelpos-tf1.pdf>]
+l.240 
+       <../figures/tsplot-original-Middelpos-tf1.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6]
-<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf, id=566,
- 269.005pt x 273.02pt>
-File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf Gra
-phic file (type pdf)
-<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf>
-Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
-os-tf3-Z_xx.pdf  used on input line 302.
-(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
-<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf, id=567,
- 269.005pt x 273.02pt>
-File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf Gra
-phic file (type pdf)
-<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf>
-Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
-os-tf3-Z_xy.pdf  used on input line 303.
-(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
-<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf, id=568,
- 269.005pt x 273.02pt>
-File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf Gra
-phic file (type pdf)
-<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf>
-Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
-os-tf3-Z_yx.pdf  used on input line 304.
-(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
-<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf, id=569,
- 269.005pt x 273.02pt>
-File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf Gra
-phic file (type pdf)
-<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf>
-Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
-os-tf3-Z_yy.pdf  used on input line 305.
-(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
-
-Overfull \hbox (13.45023pt too wide) in paragraph at lines 302--306
-[][]\OT1/cmr/m/n/10 a)[] [][]b)[]
- []
-
-
-Overfull \hbox (12.89465pt too wide) in paragraph at lines 302--306
-[][]\OT1/cmr/m/n/10 c)[] [][]d)[] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf, id=570, 263.98625pt x 2
-73.02pt>
-File: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf Graphic file (type 
-pdf)
-<use ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf>
-Package pdftex.def Info: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf 
- used on input line 313.
-(pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
-<../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf, id=571, 263.98625pt x 2
-73.02pt>
-File: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf Graphic file (type 
-pdf)
-<use ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf>
-Package pdftex.def Info: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf 
- used on input line 314.
-(pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
-
-Overfull \hbox (13.45023pt too wide) in paragraph at lines 313--315
-[][]\OT1/cmr/m/n/10 a)[] [][]b)[] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+ [6
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.242 
+       <../figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -857,16 +797,71 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.320 \clearpage
-                 <../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-
-Z_xx.pdf> <../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pd
-f> <../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf> <../
-figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf>]
+ [8]
+<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf, id=580,
+ 269.005pt x 273.02pt>
+File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf Gra
+phic file (type pdf)
+<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf>
+Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
+os-tf3-Z_xx.pdf  used on input line 313.
+(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
+<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf, id=581,
+ 269.005pt x 273.02pt>
+File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf Gra
+phic file (type pdf)
+<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf>
+Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
+os-tf3-Z_xy.pdf  used on input line 314.
+(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
+<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf, id=582,
+ 269.005pt x 273.02pt>
+File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf Gra
+phic file (type pdf)
+<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf>
+Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
+os-tf3-Z_yx.pdf  used on input line 315.
+(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
+<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf, id=583,
+ 269.005pt x 273.02pt>
+File: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf Gra
+phic file (type pdf)
+<use ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf>
+Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;Middelp
+os-tf3-Z_yy.pdf  used on input line 316.
+(pdftex.def)             Requested size: 178.55841pt x 181.22273pt.
+
+Overfull \hbox (13.45023pt too wide) in paragraph at lines 313--317
+[][]\OT1/cmr/m/n/10 a)[] [][]b)[]
+ []
+
+
+Overfull \hbox (12.89465pt too wide) in paragraph at lines 313--317
+[][]\OT1/cmr/m/n/10 c)[] [][]d)[] 
+ []
+
+<../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf, id=584, 263.98625pt x 2
+73.02pt>
+File: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf Graphic file (type 
+pdf)
+<use ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf>
+Package pdftex.def Info: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf 
+ used on input line 324.
+(pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
+<../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf, id=585, 263.98625pt x 2
+73.02pt>
+File: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf Graphic file (type 
+pdf)
+<use ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf>
+Package pdftex.def Info: ../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf 
+ used on input line 325.
+(pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
+
+Overfull \hbox (13.45023pt too wide) in paragraph at lines 324--326
+[][]\OT1/cmr/m/n/10 a)[] [][]b)[] 
+ []
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -876,104 +871,124 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.320 \clearpage
-                 <../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf> <../fi
-gures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf>]
-<../figures/map.pdf, id=1599, 236.885pt x 113.42375pt>
+l.334 
+       <../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xx.pdf> 
+<../figures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_xy.pdf> <../fig
+ures/zplot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yx.pdf> <../figures/zp
+lot-magnitude_phase-Middelpos-tf1;Middelpos-tf3-Z_yy.pdf>]
+<../figures/map.pdf, id=1354, 236.885pt x 113.42375pt>
 File: ../figures/map.pdf Graphic file (type pdf)
 <use ../figures/map.pdf>
-Package pdftex.def Info: ../figures/map.pdf  used on input line 340.
+Package pdftex.def Info: ../figures/map.pdf  used on input line 341.
 (pdftex.def)             Requested size: 372.0pt x 178.12411pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<../figures/tsplot-original-KAP103-tf1.pdf, id=1604, 262.9825pt x 270.00874pt>
+<../figures/tsplot-original-KAP103-tf1.pdf, id=1359, 262.9825pt x 270.00874pt>
 File: ../figures/tsplot-original-KAP103-tf1.pdf Graphic file (type pdf)
 <use ../figures/tsplot-original-KAP103-tf1.pdf>
 Package pdftex.def Info: ../figures/tsplot-original-KAP103-tf1.pdf  used on inp
-ut line 350.
-(pdftex.def)             Requested size: 167.39886pt x 171.87799pt.
-<../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf, id=1605, 269.0
+ut line 347.
+(pdftex.def)             Requested size: 372.0pt x 381.9566pt.
+<../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf, id=1360, 269.0
 05pt x 273.02pt>
 File: ../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf Graphic fi
 le (type pdf)
 <use ../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf>
 Package pdftex.def Info: ../figures/dftplot-original-averaged-magnitudes-KAP103
--tf1.pdf  used on input line 352.
-(pdftex.def)             Requested size: 167.39886pt x 169.8997pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+-tf1.pdf  used on input line 353.
+(pdftex.def)             Requested size: 372.0pt x 377.55537pt.
 
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10
-
-]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.358 \clearpage
+                 <../figures/snplot-Middelpos-tf1;Middelpos-tf3-E_x.pdf> <../fi
+gures/snplot-Middelpos-tf1;Middelpos-tf3-E_y.pdf>]
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.357 \clearpage
-                
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.357 \clearpage
-                 <../figures/map.pdf> <../figures/tsplot-original-KAP103-tf1.pd
-f> <../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf>]
+l.358 \clearpage
+                 <../figures/map.pdf>]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.358 \clearpage
+                 <../figures/tsplot-original-KAP103-tf1.pdf>]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.358 \clearpage
+                 <../figures/dftplot-original-averaged-magnitudes-KAP103-tf1.pd
+f>]
 <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.pdf,
- id=1960, 263.98625pt x 273.02pt>
+ id=1973, 263.98625pt x 273.02pt>
 File: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx
 .pdf Graphic file (type pdf)
 <use ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.
 pdf>
 Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-
-tf3;KAP103-tf1-Z_xx.pdf  used on input line 362.
+tf3;KAP103-tf1-Z_xx.pdf  used on input line 370.
 (pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
 <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.pdf,
- id=1961, 263.98625pt x 273.02pt>
+ id=1974, 263.98625pt x 273.02pt>
 File: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy
 .pdf Graphic file (type pdf)
 <use ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.
 pdf>
 Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-
-tf3;KAP103-tf1-Z_xy.pdf  used on input line 363.
+tf3;KAP103-tf1-Z_xy.pdf  used on input line 371.
 (pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
 <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx.pdf,
- id=1962, 263.98625pt x 273.02pt>
+ id=1975, 263.98625pt x 273.02pt>
 File: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx
 .pdf Graphic file (type pdf)
 <use ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx.
 pdf>
 Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-
-tf3;KAP103-tf1-Z_yx.pdf  used on input line 364.
+tf3;KAP103-tf1-Z_yx.pdf  used on input line 372.
 (pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
 <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy.pdf,
- id=1963, 263.98625pt x 273.02pt>
+ id=1976, 263.98625pt x 273.02pt>
 File: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy
 .pdf Graphic file (type pdf)
 <use ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy.
 pdf>
 Package pdftex.def Info: ../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-
-tf3;KAP103-tf1-Z_yy.pdf  used on input line 365.
+tf3;KAP103-tf1-Z_yy.pdf  used on input line 373.
 (pdftex.def)             Requested size: 178.55841pt x 184.66797pt.
 
-Overfull \hbox (13.45023pt too wide) in paragraph at lines 362--366
+Overfull \hbox (13.45023pt too wide) in paragraph at lines 370--374
 [][]\OT1/cmr/m/n/10 a)[] [][]b)[]
  []
 
 
-Overfull \hbox (12.89465pt too wide) in paragraph at lines 362--366
+Overfull \hbox (12.89465pt too wide) in paragraph at lines 370--374
 [][]\OT1/cmr/m/n/10 c)[] [][]d)[] 
  []
 
@@ -982,14 +997,19 @@ Overfull \hbox (12.89465pt too wide) in paragraph at lines 362--366
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12
+ [14
+
+]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.382 \clearpage
+l.379 \clearpage
                  <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP
 103-tf1-Z_xx.pdf> <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KA
 P103-tf1-Z_xy.pdf> <../figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;K
@@ -999,86 +1019,46 @@ KAP103-tf1-Z_yy.pdf>]
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-<../figures/instrument.pdf, id=2598, 342.27875pt x 256.96pt>
+ [16
+
+]
+<../figures/instrument.pdf, id=2615, 342.27875pt x 256.96pt>
 File: ../figures/instrument.pdf Graphic file (type pdf)
 <use ../figures/instrument.pdf>
-Package pdftex.def Info: ../figures/instrument.pdf  used on input line 389.
+Package pdftex.def Info: ../figures/instrument.pdf  used on input line 399.
 (pdftex.def)             Requested size: 167.39886pt x 125.67624pt.
-<../figures/solarpanel.pdf, id=2599, 403.5075pt x 302.12875pt>
+<../figures/solarpanel.pdf, id=2616, 403.5075pt x 302.12875pt>
 File: ../figures/solarpanel.pdf Graphic file (type pdf)
 <use ../figures/solarpanel.pdf>
-Package pdftex.def Info: ../figures/solarpanel.pdf  used on input line 391.
+Package pdftex.def Info: ../figures/solarpanel.pdf  used on input line 401.
 (pdftex.def)             Requested size: 167.39886pt x 125.3396pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.392   \caption
+l.402   \caption
                 {\\
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.393 ...ove the solar panels is the GPS antenna.}
+l.403 ...ove the solar panels is the GPS antenna.}
                                                   
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14
-
- <../figures/instrument.pdf> <../figures/solarpanel.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 406.
-
-(../tables/Middelpos-tf3-evalfreq_table.tex)
-Overfull \hbox (63.7901pt too wide) in paragraph at lines 406--411
- [] 
- []
-
-
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15
-
-]
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.413 \clearpage
-                ] (../tables/Middelpos-tf1-evalfreq_table.tex)
-Overfull \hbox (45.29022pt too wide) in paragraph at lines 415--421
- [] 
- []
-
-
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17
 
+ <../figures/instrument.pdf> <../figures/solarpanel.pdf>]
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.432 \clearpage
-                ] (./sn-article.bbl
-Underfull \hbox (badness 1097) in paragraph at lines 45--48
-\OT1/cmr/m/n/10 i-cal Jour-nal Inter-na-tional 130(2):475--496. [][]$https : / 
-/ doi . org / 10 . 1111 / j . 1365-[]246x .
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 416.
+
+(../tables/Middelpos-tf3-evalfreq_table.tex)
+Overfull \hbox (63.7901pt too wide) in paragraph at lines 416--421
+ [] 
  []
 
 
@@ -1093,12 +1073,58 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19])
+ [19
+pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.423 \clearpage
+                ] (../tables/Middelpos-tf1-evalfreq_table.tex)
+Overfull \hbox (45.29022pt too wide) in paragraph at lines 425--431
+ [] 
+ []
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [20
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
+ been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.442 \clearpage
+                ] (./sn-article.bbl
+Underfull \hbox (badness 1097) in paragraph at lines 49--52
+\OT1/cmr/m/n/10 i-cal Jour-nal Inter-na-tional 130(2):475--496. [][]$https : / 
+/ doi . org / 10 . 1111 / j . 1365-[]246x .
+ []
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21
+
+]
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22])
+
+Package natbib Warning: There were undefined citations.
+
+
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
 (./sn-article.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
@@ -1113,13 +1139,13 @@ Package rerunfilecheck Info: File `sn-article.out' has not changed.
 (rerunfilecheck)             Checksum: 4A1F7BFB66B4E15B71F67B3E469074D3;951.
  ) 
 Here is how much of TeX's memory you used:
- 15026 strings out of 473190
- 237062 string characters out of 5715801
- 679658 words of memory out of 5000000
- 37935 multiletter control sequences out of 15000+600000
+ 15036 strings out of 473190
+ 237213 string characters out of 5715801
+ 679842 words of memory out of 5000000
+ 37942 multiletter control sequences out of 15000+600000
  593276 words of font info for 168 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,12n,93p,1072b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,93p,1422b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
 7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10
@@ -1146,10 +1172,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on sn-article.pdf (20 pages, 6755516 bytes).
+Output written on sn-article.pdf (23 pages, 6759514 bytes).
 PDF statistics:
- 2815 PDF objects out of 2984 (max. 8388607)
- 2517 compressed objects within 26 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 2829 PDF objects out of 2984 (max. 8388607)
+ 2528 compressed objects within 26 object streams
+ 93 named destinations out of 1000 (max. 500000)
  155 words of extra memory for PDF output out of 10000 (max. 10000000)
 
