@@ -57,36 +57,6 @@
 \usepackage{algorithmicx}%
 \usepackage{algpseudocode}%
 \usepackage{listings}%
-%%%%
-
-%%%%%=============================================================================%%%%
-%%%%  Remarks: This template is provided to aid authors with the preparation
-%%%%  of original research articles intended for submission to journals published 
-%%%%  by Springer Nature. The guidance has been prepared in partnership with 
-%%%%  production teams to conform to Springer Nature technical requirements. 
-%%%%  Editorial and presentation requirements differ among journal portfolios and 
-%%%%  research disciplines. You may find sections in this template are irrelevant 
-%%%%  to your work and are empowered to omit any such section if allowed by the 
-%%%%  journal you intend to submit to. The submission guidelines and policies 
-%%%%  of the journal take precedence. A detailed User Manual is available in the 
-%%%%  template package for technical guidance.
-%%%%%=============================================================================%%%%
-
-%% as per the requirement new theorem styles can be included as shown below
-\theoremstyle{thmstyleone}%
-\newtheorem{theorem}{Theorem}%  meant for continuous numbers
-%%\newtheorem{theorem}{Theorem}[section]% meant for sectionwise numbers
-%% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
-\newtheorem{proposition}[theorem]{Proposition}% 
-%%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
-
-\theoremstyle{thmstyletwo}%
-\newtheorem{example}{Example}%
-\newtheorem{remark}{Remark}%
-
-\theoremstyle{thmstylethree}%
-\newtheorem{definition}{Definition}%
-
 
 % Forces page with only figure to have figure at top
 %\makeatletter
@@ -100,16 +70,6 @@
 
 \title[The Magnetotelluric Impedance at Middelpos, South Africa]{The Magnetotelluric Impedance at Middelpos, South Africa}
 
-%%=============================================================%%
-%% GivenName	-> \fnm{Joergen W.}
-%% Particle	-> \spfx{van der} -> surname prefix
-%% FamilyName	-> \sur{Ploeg}
-%% Suffix	-> \sfx{IV}
-%% \author*[1,2]{\fnm{Joergen W.} \spfx{van der} \sur{Ploeg} 
-%%  \sfx{IV}}\email{iauthor@gmail.com}
-%%=============================================================%%
-
-
 \author*[1, 2]{\fnm{Robert S.} \sur{Weigel}}\email{rweigel@gmu.edu}
 
 \author[2]{\fnm{Pierre J.} \sur{Cilliers}}\email{pjcilliers1952@gmail.com}
@@ -120,26 +80,10 @@
 
 \affil[2]{\orgdiv{Space Weather Lab}, \orgname{George Mason University}, \orgaddress{\street{4400 University Drive}, \city{Fairfax}, \postcode{22030}, \state{VA}, \country{U.S.}}}
 
-
-%%==================================%%
-%% Sample for unstructured abstract %%
-%%==================================%%
-
 \abstract{\unboldmath
 From 2012-07-12 through 2012-09-04 (55 days), a magnetotelluric (MT) instrument made 1-second cadence measurements at a site in Middelpos, South Africa. Two methods were used to compute the surface impedance transfer function (TF): (1) 55 TFs were computed and averaged using non-overlapping one-day segments, and (2) one TF was computed using the full 55-day segment. The error bars were calculated using parametric formulas, which assume a known distribution of errors, and a bootstrap method. In addition to coherence, a frequency--domain quality metric, the signal-to-prediction error ($\text{SE}$), was calculated to assess the quality of predictions of the electric field from the computed TFs. The computed TFs have significant off-diagonal components, suggesting a complex ground-conductivity structure. The $\text{SE}$ is greater than unity only in the range of 1-minute to 6-hours for the $E_x$--related terms and 1-minute to 1-hour for $E_y$--related terms. We also find differences in the transfer functions computed in two ways that are inconsistent with the error bars. We also compare the transfer function at Middelpos with that computed at a nearby (${\sim}34$~km) location as part of a different MT campaign. We find significant differences in the transfer functions at the two locations, which suggests significant lateral variations in the ground conductivity structure near Middelpos.
 }
 
-%%================================%%
-%% Sample for structured abstract %%
-%%================================%%
-
-% \abstract{\textbf{Purpose:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
-% 
-% \textbf{Methods:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
-% 
-% \textbf{Results:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
-% 
-% \textbf{Conclusion:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.}
 
 \keywords{impedance tensor, magnetotelluric method, geoelectric field, geomagnetic field}
 
