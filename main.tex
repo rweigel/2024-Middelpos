@@ -128,7 +128,7 @@ The $+x$-axes of both the magnetometer and electric field probe were aligned wit
 
 The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x \mbox{ or } y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $112$ ($0.002$\%); for $E_y(t)$, the number was $904$ ($0.02$\%).
 
-Figure~\ref{fig:dft} shows the averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}. The averaged amplitudes are frequency--domain band averages of the discrete discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs55d} of Appendix~\ref{appendix:tables}. To compute the averages, the raw DFT coefficients were averaged within the frequency bands and the resulting $f_e$-centered DFT coefficients were averaged across the $55$ segments. The vertical bars correspond to 95\% confidence intervals computed using $\pm 1.96s/\sqrt{55}$, where $s$ is the sample standard deviation of the $55$ $f_e$-centered DFT magnitudes. Error bars were also computed using a bootstrap resampling of the $55$ DFT values; these error bars were within ${\sim}10$\% of the analytical error bars.
+Figure~\ref{fig:dft} shows the averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}. The averaged amplitudes are frequency--domain band averages of the discrete discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs1d} of Appendix~\ref{appendix:tables}. To compute the averages, the raw DFT coefficients were averaged within the frequency bands and the resulting $f_e$-centered DFT coefficients were averaged across the $55$ segments. The vertical bars correspond to 95\% confidence intervals computed using $\pm 1.96s/\sqrt{55}$, where $s$ is the sample standard deviation of the $55$ $f_e$-centered DFT magnitudes. Error bars were also computed using a bootstrap resampling of the $55$ DFT values; these error bars were within ${\sim}10$\% of the analytical error bars.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
@@ -137,8 +137,8 @@ Figure~\ref{fig:dft} shows the averaged amplitudes of the Fourier coefficients f
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf}
-  \caption{Magnitudes of discrete Fourier transform coefficients for measurements in Fig~\ref{fig:timeseries}. The vertical bars correspond to 95\% confidence intervals and a filled circle indicates the computed lower bound is below zero.}
+  \includegraphics[width=\textwidth]{figures/dftplot-original-averaged-magnitudes-Middelpos-tf3.pdf}
+  \caption{Magnitudes of discrete Fourier transform coefficients for measurements in Fig~\ref{fig:timeseries}. The vertical bars correspond to 95\% confidence intervals.}
   \label{fig:dft}
 \end{figure}
 
@@ -316,10 +316,10 @@ However, the transfer function phases are generally consistent, with the excepti
 To determine if the large geomagnetic storm may explain some of the differences, we have computed transfer functions using only data prior to November 20th and find consistent results, similar to \cite{Chen2022}, who found that for several of the SAMTEX sites, the computed transfer functions were not strongly dependent on whether the storm was included or not.
 
 \begin{figure}[hb!]
-  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.pdf}} 
-  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.pdf}} 
-  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx.pdf}} 
-  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy.pdf}} 
+  \subfigure(a){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xx.pdf}}
+  \subfigure(b){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_xy.pdf}}
+  \subfigure(c){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yx.pdf}}
+  \subfigure(d){\includegraphics[width=0.48\textwidth]{figures/zplot-magnitude_phase-Middelpos-tf1;KAP103-tf3;KAP103-tf1-Z_yy.pdf}}
 
   \caption{Comparison of transfer function computed at Middelpos with two transfer functions computed at the KAP103 site. Error bars have the format as in Figure~\ref{fig:z}.}
   \label{fig:z-compare-KAP103}

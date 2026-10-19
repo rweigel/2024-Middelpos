@@ -7,7 +7,7 @@ DIR1=$DIR0/figures
 DIR2=$RUNDIR/data/KAP03/KAP103/tfs-20031108-20031204/figures
 
 cp "$DIR1/tsplot-original-Middelpos-tf1.pdf" figures/
-cp "$DIR1/dftplot-original-averaged-magnitudes-Middelpos-tf1.pdf" figures/
+cp "$DIR1/dftplot-original-averaged-magnitudes-Middelpos-tf3.pdf" figures/
 
 cp "$DIR2/tsplot-original-KAP103-tf1.pdf" figures/
 cp "$DIR2/dftplot-original-averaged-magnitudes-KAP103-tf1.pdf" figures/
