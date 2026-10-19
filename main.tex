@@ -94,7 +94,7 @@ From 2012-07-12 through 2012-09-04 (55 days), a magnetotelluric (MT) instrument 
 
 \section{Introduction}
 
-The electric and magnetic fields measured on Earth's surface can be related by a transfer function derived from Maxwell's equations (\cite{Vozoff1991, Simpson2005, Utada2026}). The electromagnetic field measured on Earth's surface are primarily due to waves initiated in the ionosphere that penetrate into and reflect off of Earth's conducting surface at various depths \citep{Cagniard1953,Pirjola1982}. The transfer function at Earth's surface is referred to as the surface impedance and relates the horizontal components of the surface $\mathbf{E}$ and $\mathbf{B}$ by a 2x2 matrix with frequency dependent and complex-valued components.
+The electric and magnetic fields measured on Earth's surface can be related by a transfer function derived from Maxwell's equations (\cite{Vozoff1991, Simpson2005, Utada2026}). The electromagnetic field measured on Earth's surface is primarily due to waves initiated in the ionosphere that penetrate into and reflect off of Earth's conducting surface at various depths \citep{Cagniard1953,Pirjola1982}. The transfer function at Earth's surface is referred to as the surface impedance and relates the horizontal components of the surface $\mathbf{E}$ and $\mathbf{B}$ by a 2x2 tensor with frequency dependent and complex-valued components.
 
 The surface impedance of the Earth near conducting systems, such as power lines and pipelines, is an essential parameter for deriving geomagnetically induced currents (GICs) in the power line from measured or predicted geomagnetic fields. Given a measured or modeled geomagnetic field, the surface impedance can be used to predict the geoelectric field, which can then used to compute GICs in power lines and pipelines (e.g., \cite{Marshall2019,AlvesRibeiro2023}). The surface impedance is also the starting point for estimating the subsurface  conductivity structure because the surface impedance depends on the subsurface conductivity \citep{Simpson2005}.
 
@@ -102,11 +102,11 @@ The surface impedance is typically derived from magnetotelluric (MT) measurement
 
 %The original work of \cite{Cagniard1953} on MT data analysis assumed a plane wave electromagnetic field incident on layered conducting slabs that are infinite and extent and vary only in the direction perpendicular to the wave velocity, which results in a surface impedance matrix with off-diagonal components of zero. 
 
-Several algorithms have been used to derive the surface impedance transfer function. \cite{Sims1971} introduced regression--based algorithms for computing the components of transfer functions. Variations on this method that have been used include \cite{Egbert1997,Egbert2011,Jones1989,Chave2012}, and \cite{Larsen1996}. Recent papers that derived transfer functions from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015}, \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
+Several algorithms have been used to derive the surface impedance transfer function. \cite{Sims1971} introduced regression--based algorithms for computing the surface impedance. Variations on this method that have been used include \cite{Egbert1997,Egbert2011,Jones1989,Chave2012}, and \cite{Larsen1996}. Recent papers that derived transfer functions from MT measurements include \cite{Jones1989}, \cite{Moorkamp2007}, \cite{Fujii2015}, \cite{Heyns2020}, \cite{Weigel2019}, and \cite{Chen2021}.
 
 %Other algorithms include that in the LEMI software provided with the LEMI-417 instrument produced by the LLC in Lviv, Ukraine \cite{LEMI2025}, 
 
-In section~\ref{section:Data}, we provide details on the $\mathbf{E}$ and $\mathbf{B}$ time series in the time and frequency domains. In this work, we use two primary approaches and compare their results. In section~\ref{section:Models_and_Methods}, we describe these two approaches. In section~\ref{section:Results}, we present the results of the transfer function computations at Middelpos. MT measurements and data from a nearby location as part of a MT campaign in 2003 are compred with our results at Middelpos.
+In section~\ref{section:Data}, we provide details on the $\mathbf{E}$ and $\mathbf{B}$ time series in the time and frequency domains. In this work, we use two primary approaches to estimate the surface impedance and compare their results. In section~\ref{section:Models_and_Methods}, we describe these two approaches. In section~\ref{section:Results}, we present the results of the transfer function computations at Middelpos. MT measurements and data from a nearby location as part of a MT campaign in 2003 are compred with our results at Middelpos.
 
 %In this paper, we use the regression-based algorithm of \cite{Sims1971} to compute the surface impedance transfer function from MT measurements made at Middelpos, South Africa. We also introduce a new metric for assessing the quality of the computed transfer function, which we call the signal-to-prediction error ($\text{SE}$). This metric quantifies how well the predicted electric field matches the measured electric field.
 %\cite{Eggers1982} introduced the eigenstate analysis of the impedance tensor to allow for non-orthogonality between the magnetic and electric field vectors. \cite{Bahr1988} introduced the telluric vector technique to address local telluric distortion.
@@ -128,14 +128,7 @@ The $+x$-axes of both the magnetometer and electric field probe were aligned wit
 
 The time series of 1--second--cadence electric, $\mathbf{E}(t)$, and magnetic, $\mathbf{B}(t)$, field measurements is shown in Figure~\ref{fig:timeseries}. Each component $k=x \mbox{ or } y$ of $\mathbf{E}(t)$ was despiked by finding times when $|E_k(t+1)-E_k(t)|\ge 0.1$~mV/km and replacing values in the time range $[t-1, t+5]$ with linearly interpolated values based on $E_k(t-2)$ and $E_k(t+6)$. The number of spikes in $E_x(t)$ was $112$ ($0.002$\%); for $E_y(t)$, the number was $904$ ($0.02$\%).
 
-Figure~\ref{fig:dft} shows the averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}. The averaged amplitudes are frequency--domain band averages of the discrete discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs55d} of Appendix~\ref{appendix:tables}. The vertical bars correspond to 95\% confidence intervals; the length of the confidence interval for the magnitude of a Fourier coefficient, $\Delta|\widetilde{A}|$, calculated using propagation of errors on $|\widetilde{A}| = \sqrt{A_\text{r}^2 + A_\text{i}^2}$, is
-
-\begin{equation}
-\Delta\big|\widetilde{A}\big| = \sqrt{(A_\text{r}\Delta A_\text{r})^2 + (A_\text{i}\Delta A_\text{i})^2} / \big|\widetilde{A}\big|
-\end{equation}
-
-\noindent
-where $\Delta A_\text{r}$ and $\Delta A_\text{i}$ are the lengths of the 95\% confidence intervals for the real, $A_\text{r}$, and imaginary, $A_\text{i}$, parts of $\widetilde{A}$, respectively; $\widetilde{A}$ is one of the $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency domain averages shown in Figure~\ref{fig:dft}. The lengths of the symmetric 95\% confidence intervals for the averages $A_\text{r}$ and $A_\text{i}$ were determined using $\pm 2 (s/\sqrt{n})t^{-1}_{n-1}(0.025)$, where $n$ is the number of values used to calculate the average, $t^{-1}_{n-1}(0.025)$ is the inverse $t$-distribution evaluated at $0.025$, and $s$ is the standard deviation of the sample.
+Figure~\ref{fig:dft} shows the averaged amplitudes of the Fourier coefficients for each vector component of the time series shown in Figure~\ref{fig:timeseries}. The averaged amplitudes are frequency--domain band averages of the discrete discrete Fourier transform amplitudes. The values of the band centers, marked with filled circles, the number of values in each band, and the band boundaries are given in Table~\ref{table:evalfreqs55d} of Appendix~\ref{appendix:tables}. To compute the averages, the raw DFT coefficients were averaged within the frequency bands and the resulting $f_e$-centered DFT coefficients were averaged across the $55$ segments. The vertical bars correspond to 95\% confidence intervals computed using $\pm 1.96s/\sqrt{55}$, where $s$ is the sample standard deviation of the $55$ $f_e$-centered DFT magnitudes. Error bars were also computed using a bootstrap resampling of the $55$ DFT values; these error bars were within ${\sim}10$\% of the analytical error bars.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{figures/tsplot-original-Middelpos-tf1.pdf}
@@ -153,21 +146,20 @@ where $\Delta A_\text{r}$ and $\Delta A_\text{i}$ are the lengths of the 95\% co
 \section{Models and Methods}
 \label{section:Models_and_Methods}
 
-$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to estimate the complex--valued transfer function matrix $\boldsymbol{\mathcal{\widetilde{Z}}}$ in
+$\mathbf{E}(t)$ and $\mathbf{B}(t)$ measurements are used to estimate the complex--valued transfer function tensor $\boldsymbol{\mathcal{\widetilde{Z}}}$ in
 
 \begin{equation}
-    \mathbf{\widetilde{E}}(f_e) = \boldsymbol{\mathcal{
-\widetilde{Z}}}(f_e)\mathbf{\widetilde{B}}(f_e)\text{ ,}
+  \mathbf{\widetilde{E}}(f_e) = \boldsymbol{\mathcal{\widetilde{Z}}}(f_e)\mathbf{\widetilde{B}}(f_e)\text{ ,}
 \end{equation}
 
 \noindent where $f_e$ is an ``evaluation frequency" and
 
 \begin{equation}
-    \boldsymbol{\mathcal{\widetilde{Z}}}(f_e) = 
-        \begin{bmatrix}
-            \widetilde{Z}_{xx}(f_e) & \widetilde{Z}_{xy}(f_e)\\
-            \widetilde{Z}_{yx}(f_e) & \widetilde{Z}_{yy}(f_e)
-        \end{bmatrix}
+  \boldsymbol{\mathcal{\widetilde{Z}}}(f_e) = 
+    \begin{bmatrix}
+      \widetilde{Z}_{xx}(f_e) & \widetilde{Z}_{xy}(f_e)\\
+      \widetilde{Z}_{yx}(f_e) & \widetilde{Z}_{yy}(f_e)
+    \end{bmatrix}
 \end{equation}
 
 \noindent using a method described by \cite{Sims1971}: for each vector component of $\mathbf{E}$, $k=x\mbox{ or }y$, a four parameter over--determined linear regression is performed using
@@ -187,12 +179,23 @@ A key result is that there are significant differences in the transfer functions
 
 In the literature, results are often presented using only one algorithm and a single set of parameters for that algorithm. However, it seems that, given that these two reasonable approaches for computing a transfer function can yield different results, there is an ``algorithmic uncertainty" that should be accounted for by computing the transfer function using different algorithms and varying parameter values for a given algorithm. There is also an uncertainty due to the data selection; \cite{Chen2022} noted that for some SAMTEX sites, the transfer functions were dependent on the time intervals used in their computation, in particular on whether the interval contained a period of high geomagnetic activity. This is expected because the plane wave approximation is invalid when geomagnetic activity is strong. Conversely, in the limit of low geomagnetic activity, the signal-to-noise ratio is low, leading to uncertainty in the computed transfer functions.
 
-There are two common modifications to these estimation methods. The first is the ``remote reference"  method, which uses $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such measurements. The second uses a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically downweights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error, described in Section~\ref{section:Results} is less than 1.0.
+There are two common modifications to these estimation methods. The first is the ``remote reference"  method, which uses $\mathbf{B}(t)$ measurements covering the same time interval from a nearby magnetometer~\citep{Simpson2005}. In our case, we do not have such measurements. The second uses a robust algorithm for regression, which involves computing estimates of $\widetilde{Z}_{kx}$ and $\widetilde{Z}_{ky}$ using a custom error function instead of the standard sum--of--squares error function (\cite{Simpson2005}; see also~\cite{Thomson2016} for a discussion about the ``overselling'' of this method). The custom error function automatically down-weights outliers. For the data considered, we have found that this method produces differing results only at evaluation frequencies where the signal-to-prediction error, described in Section~\ref{section:Results} is less than 1.0.
 
 \section{Results}
 \label{section:Results}
 
-Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $55$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6). For the magnitudes calculated using the average of $55$ one--day segments, the 95\% confidence intervals were calculated using the formula given in Section~\ref{section:Data} for the magnitudes of the DFT amplitudes. The error bars for the phases were calculated using propagation of errors on
+Figure~\ref{fig:z} shows the results of the regression described in Section~\ref{section:Models_and_Methods}. For the components of $\boldsymbol{\mathcal{\widetilde{Z}}}$ computed using one $55$--day segment, 95\% confidence intervals were computed using formulas that assume the regression errors are independent and identically distributed (\cite{Draper1981}; chapter 2.6).
+
+For the magnitudes calculated using the average of $55$ one--day segments, the 95\% confidence intervals were calculated using propagation of errors on $|\widetilde{Z}| = \sqrt{Z_\text{r}^2 + Z_\text{i}^2}$,
+
+\begin{equation}
+\Delta\big|\widetilde{Z}\big| = \sqrt{(Z_\text{r}\Delta Z_\text{r})^2 + (Z_\text{i}\Delta Z_\text{i})^2} / \big|\widetilde{Z}\big|
+\end{equation}
+
+\noindent
+where $\Delta Z_\text{r}$ and $\Delta Z_\text{i}$ are the lengths of the 95\% confidence intervals for the real, $Z_\text{r}$, and imaginary, $Z_\text{i}$, parts of $\widetilde{Z}$, respectively; $\widetilde{Z}$ is one of the $\widetilde{B}_x$, $\widetilde{B}_y$, $\widetilde{E}_x$, and $\widetilde{E}_y$, which are frequency domain averages shown in Figure~\ref{fig:dft}. The lengths of the symmetric 95\% confidence intervals for the averages $Z_\text{r}$ and $Z_\text{i}$ were determined using $\pm 2 (s/\sqrt{n})t^{-1}_{n-1}(0.025)$, where $n$ is the number of values used to calculate the average, $t^{-1}_{n-1}(0.025)$ is the inverse $t$-distribution evaluated at $0.025$, and $s$ is the standard deviation of the sample.
+
+The error bars for the phases were calculated using propagation of errors on
 
 $$\phi_{ij} = \tan^{-1}[
   \text{Im}(\widetilde{Z}_{ij})
@@ -355,18 +358,7 @@ We also compared the transfer function at Middelpos with the nearest MT site fro
 
 \section{Evaluation Frequencies}\label{appendix:tables}
 
-Band center frequencies (and periods), $f_e$ ($T_e$), lower and upper band bounds, $f_l$ and $f_u$ ($T_l$ and $T_u$), lower and upper band DFT indices, $i_l$ and $i_u$, and number of frequencies in band, $N_e$ for the 1-day and 55-day regression methods are shown in Tables~\ref{table:evalfreqs55d} and~\ref{table:evalfreqs1d}, respectively.
-
-
-\begin{table}
-  \caption{Frequency domain band information for the 55-day regression method.}
-  \centering
-  \small
-  \input{tables/Middelpos-tf3-evalfreq_table}
-\label{table:evalfreqs55d}
-\end{table}
-
-\clearpage
+Band center frequencies (and periods), $f_e$ ($T_e$), lower and upper band bounds, $f_l$ and $f_u$ ($T_l$ and $T_u$), lower and upper band DFT indices, $i_l$ and $i_u$, and number of frequencies in band, $N_e$ for the 1-day and 55-day regression methods are shown in Tables~\ref{table:evalfreqs1d} and~\ref{table:evalfreqs55d}, respectively.
 
 \begin{table}[hbt]
   \caption{Frequency domain band information for the 1-day regression method.}
@@ -374,6 +366,16 @@ Band center frequencies (and periods), $f_e$ ($T_e$), lower and upper band bound
   \small
   \input{tables/Middelpos-tf1-evalfreq_table}
 \label{table:evalfreqs1d}
+\end{table}
+
+\clearpage
+
+\begin{table}
+  \caption{Frequency domain band information for the 55-day regression method.}
+  \centering
+  \small
+  \input{tables/Middelpos-tf3-evalfreq_table}
+\label{table:evalfreqs55d}
 \end{table}
 
 \end{appendices}
